@@ -8,14 +8,29 @@
     <link rel="stylesheet" href="css/reset_css.css" type="text/css">
 
     <style>
-        body{background: #212121;}
-        header{width: 1200px; height: 100px; margin: 0 auto; text-align: center; background: transparent; background: #212121;}  
-        nav{width: 600px; margin:0 0 0 600px;}
+
+        header{width: 100%; height: 100px; margin: 0 auto; text-align: center; background: transparent; background: #212121;}  
+        nav{width: 600px; margin:0 0 0 900px;}
         nav ul{display: flex; flex-direction: row; justify-content: space-around; margin: 0 auto; font-size: 18px; color: #fff;}
         nav ul li{ float: left; margin: 0 auto; padding: 38px 0;}
 
-        .main_banner{width: 1200px; height: 800px; margin: 0 auto;}
+        .main_banner_cover{background: #212121;}
+        .main_banner{width: 1200px; height: 750px; margin: 0 auto;}
         .main_banner img{width: 100%; height: 100%;}
+
+        .series_cover{width:100%; height: 700px; background: #313131;}
+        .series{width: 1200px; height: 600px; margin: 0 auto; overflow: hidden; position: relative; top: 50px;}
+        .series input{display:none;}
+        .series ul{width:calc(100% * 3); display:flex; transition:1s; }
+        .series li{width:calc(100% / 3); height:600px;}
+        .slide_button{position:relative;bottom:35px;left:0;right:0;text-align:center;z-index:2;}
+        .slide_button label{width:50px; height:8px; border-radius:10px; border:2px solid #aaa; display:inline-block; background:#fff; font-size:0; transition:0.5s; cursor:pointer;}
+        #pos1:checked ~ ul{margin-left:0; transition: 1.3s;}
+        #pos2:checked ~ ul{margin-left:-100%; transition: 1.3s; }
+        #pos3:checked ~ ul{margin-left:-200%; transition: 1.3s;}
+        #pos1:checked ~ .slide_button label:nth-child(1),
+        #pos2:checked ~ .slide_button label:nth-child(2),
+        #pos3:checked ~ .slide_button label:nth-child(3){background:#aaa;}
     </style>
 
 </head>
@@ -31,12 +46,29 @@
     </nav>
 </header>
 
-<div class="main_banner">
-    <img src="img/main/main_banner.jpg" alt="main_banner_img">
+<div class="main_banner_cover">
+    <div class="main_banner">
+        <img src="img/main/main_banner/main_banner.jpg" alt="main_banner_img">
+    </div>
 </div>
+<div class="series_cover">
+    <div class="series">
+        <input type="radio" name="pos" id="pos1" checked>
+        <input type="radio" name="pos" id="pos2">
+        <input type="radio" name="pos" id="pos3">
 
-<div class="series">
-    <img src="#" alt="series_banner">
+        <ul>
+            <li><img src="img/main/series_banner/gaga.jpg" alt="series_gaga"></li>
+            <li><img src="img/main/series_banner/galileo.jpg" alt="series_galileo"></li>
+            <li></li>
+        </ul>
+
+        <p class="slide_button">
+            <label for="pos1">1</label>
+            <label for="pos2">2</label>
+            <label for="pos3">3</label>
+        </p>
+    </div>
 </div>
 
 <div class="master">
