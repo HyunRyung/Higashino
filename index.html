@@ -1,40 +1,181 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Higashino_Keigo</title>
-    <link rel="stylesheet" href="css/reset_css.css" type="text/css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Higashino_Keigo</title>
+   <link rel="stylesheet" href="css/reset_css.css" type="text/css">
 
-    <style>
+  <style>
+    body{background: #222;}
 
+    /* header start */
+    header{width: 100%; height: 100px; margin: 0 auto; text-align: center; background: transparent; background: #212121;}  
+    nav{width: 600px; margin:0 auto}
+    nav ul{display: flex; flex-direction: row; justify-content: space-around; margin: 0 auto; font-size: 18px; color: #fff;}
+    nav ul li{ float: left; margin: 0 auto; padding: 38px 0;}
+    nav ul li a:link{color:#fff;}
+    nav ul li a:visited{color:#fff;}
+    /* header end */
 
-        header{width: 100%; height: 100px; margin: 0 auto; text-align: center; background: transparent; background: #212121;}  
-        nav{width: 600px; margin:0 0 0 900px;}
-        nav ul{display: flex; flex-direction: row; justify-content: space-around; margin: 0 auto; font-size: 18px; color: #fff;}
-        nav ul li{ float: left; margin: 0 auto; padding: 38px 0;}
-        nav ul li a:link{color:#fff;}
-        nav ul li a:visited{color:#fff;}
-
-        .main_banner_cover{background: #212121;}
-        .main_banner{width: 1200px; height: 750px; margin: 0 auto;}
-        .main_banner img{width: 100%; height: 100%;}
-
+    /* main_banner start */
+    .main_banner_cover{background: #212121;}
+    .main_banner{width: 1200px; height: 750px; margin: 0 auto;}
+    .main_banner img{width: 100%; height: 100%;}
+    /* main_banner end */
  
-        .series{width: 1200px; height: 600px; margin: 0 auto; overflow: hidden; position: relative; top: 50px;}
-        .series input{display:none;}
-        .series ul{width:calc(100% * 3); display:flex; transition:1s; }
-        .series li{width:calc(100% / 3); height:600px;}
-        .slide_button{position:relative;bottom:35px;left:0;right:0;text-align:center;z-index:2;}
-        .slide_button label{width:50px; height:8px; border-radius:10px; border:2px solid #aaa; display:inline-block; background:#fff; font-size:0; transition:0.5s; cursor:pointer;}
-        #pos1:checked ~ ul{margin-left:0; transition: 1.3s;}
-        #pos2:checked ~ ul{margin-left:-100%; transition: 1.3s; }
-        #pos3:checked ~ ul{margin-left:-200%; transition: 1.3s;}
-        #pos1:checked ~ .slide_button label:nth-child(1),
-        #pos2:checked ~ .slide_button label:nth-child(2),
-        #pos3:checked ~ .slide_button label:nth-child(3){background:#aaa;}
-    </style>
+    /* series start */
+    .series{width: 1200px; height: 600px; margin: 0 auto; overflow: hidden; margin-top: 50px;}
+    .series img{width: 100%; height: 100%;}
+    .series input{display:none;}
+    .series ul{width:calc(100% * 3); display:flex; transition:1s; }
+    .series li{width:calc(100% / 3); height:600px;}
+    /* series -- slide_button start */
+    .slide_button{position:relative;bottom:35px;left:0;right:0;text-align:center;z-index:2;}
+    .slide_button label{width:50px; height:8px; border-radius:10px; border:2px solid #aaa; display:inline-block; background:#fff; font-size:0; transition:0.5s; cursor:pointer;}
+    #pos1:checked ~ ul{margin-left:0.1%; transition: 1.3s;}
+    #pos2:checked ~ ul{margin-left:-100%; transition: 1.3s; }
+    #pos3:checked ~ ul{margin-left:-200%; transition: 1.3s;}
+    #pos1:checked ~ .slide_button label:nth-child(1),
+    #pos2:checked ~ .slide_button label:nth-child(2),
+    #pos3:checked ~ .slide_button label:nth-child(3){background:#aaa;}
+    /* series -- slide_button end */
+    /* series end */
+
+    /* master start */
+    .master{width:1200px; height: 400px; margin: 0 auto; margin-top: 200px; margin-bottom: 200px; display: flex; justify-content: space-around; text-align: center; color: #fff;}
+    .master img{width: 100%; height: 100%; }
+    .master img:hover{transform: scale(1.2); transition:1s;}
+    .master_1, .master_2, .master_3{width: 300px; height: 400px; float: left; margin-top: 50px;}
+    .master_img1, .master_img2, .master_img3{width: 200px; height: 250px; margin: 40px 50px;}
+    .master_img2{border: 1px solid #eee;}
+    /* master end */
+
+    /* puzzle start */
+
+    .nitta_box, .short_box{display: none;}
+
+
+
+    .puzzle{width: 1200px; height: 1060px; margin: 0 auto;}
+    .move{width: 1200px; height: 40px;margin: 0 auto; }
+    .choice{width: 1190px; height: 100%;  margin-left: 10px;}
+    .choice>div{width: 292.5px; height: 40px; float: left; padding:10px 0; text-align: center; cursor: pointer; margin: 0 2.5px 0 2.5px; background-color: #333; border-top-right-radius: 2px; border-top-left-radius:2px; color:#eee;}
+    .choice>div:hover{background: #fff; color: #000; transition: 0.7s;}
+    
+    /* gaga_box(+text) start */
+    .gaga_box{width: 1200px; height: 1020px; }
+    .gaga_box>div{width: 390px; height: 500px; float: left; margin: 5px 5px; }
+
+    /* graduation */
+    .graduation{background: url(img/main/puzzle/gaga/graduation.jpg);}
+    .graduation_text{width: 100%; height: 100%; margin: 0 auto; opacity: 0;}
+    .graduation:hover .graduation_text{opacity: 0.63; background: #afcfdd; transition: 1.15s;}
+
+    /* twokiller */
+    .twokiller{background: url(img/main/puzzle/gaga/twokiller.jpg);}
+    .twokiller_text{width: 100%; height: 100%; margin: 0 auto; opacity: 0;}
+    .twokiller:hover .twokiller_text{opacity: 0.63; background: #afcfdd; transition: 1.15s;}
+    .twokiller:hover .twokiller_text{opacity: 0.63; background: #afcfdd; transition: 1.15s;}
+
+    /* malice */
+    .malice{background: url(img/main/puzzle/gaga/malice.jpg);}
+    .malice_text{width: 100%; height: 100%; margin: 0 auto; opacity: 0;}
+    .malice:hover .malice_text{opacity: 0.63; background: #afcfdd; transition: 1.15s;}
+
+    /* lie */
+    .lie{background: url(img/main/puzzle/gaga/lie.jpg);}
+    .lie_text{width: 100%; height: 100%; margin: 0 auto; opacity: 0;}
+    .lie:hover .lie_text{opacity: 0.63; background: #afcfdd; transition: 1.15s;}
+
+    /* kirin */
+    .kirin{background: url(img/main/puzzle/gaga/kirin.jpg);}
+    .kirin_text{width: 100%; height: 100%; margin: 0 auto; opacity: 0;}
+    .kirin:hover .kirin_text{opacity: 0.63; background: #afcfdd; transition: 1.15s;}
+      
+    /* red_finger */
+    .red_finger{background: url(img/main/puzzle/gaga/red_finger.jpg);}
+    .red_finger_text{width: 100%; height: 100%; margin: 0 auto; opacity: 0;}
+    .red_finger:hover .red_finger_text{opacity: 0.63; background: #afcfdd; transition: 1.15s;}      
+    /* gaga_box(+text) end */
+
+    /* galileo_box(+text) start */
+    .galileo_box{width: 1200px; height: 1020px; display: none;}
+    .galileo_box>div{width: 390px; height: 500px; float: left; margin: 5px 5px; }
+
+    /* detective */
+    .detective{background: url(img/main/puzzle/galileo/detective.jpg);}
+    .detective_text{width: 100%; height: 100%; margin: 0 auto; opacity: 0;}
+    .detective:hover .detective_text{opacity: 0.63; background: #afcfdd; transition: 1.15s;}
+
+    /* prophetic */
+    .prophetic{background: url(img/main/puzzle/galileo/prophetic.jpg);}
+    .prophetic img{width: 100%; height: 100%;}
+    .prophetic_text{width: 100%; height: 100%; margin: 0 auto; opacity: 0;}
+    .prophetic:hover .prophetic_text{opacity: 0.63; background: #afcfdd; transition: 1.15s;}
+
+    /* suspect_x */
+    .suspect_x{background: url(img/main/puzzle/galileo/suspect_x.jpg);}
+    .suspect_x_text{width: 100%; height: 100%; margin: 0 auto; opacity: 0;}
+    .suspect_x:hover .suspect_x_text{opacity: 0.63; background: #afcfdd; transition: 1.15s;}
+
+    /* saint */
+    .saint{background: url(img/main/puzzle/galileo/saint.jpg);}
+    .saint_text{width: 100%; height: 100%; margin: 0 auto; opacity: 0;}
+    .saint:hover .saint_text{opacity: 0.63; background: #afcfdd; transition: 1.15s;}
+
+    /* angulsh */
+    .angulsh{background:url(img/main/puzzle/galileo/angulsh.jpg) ;}
+    .angulsh_text{width: 100%; height: 100%; margin: 0 auto; opacity: 0;}
+    .angulsh:hover .angulsh_text{opacity: 0.63; background: #afcfdd; transition: 1.15s;}
+
+    /* equations */
+    .equations{background: url(img/main/puzzle/galileo/equation.jpg);}
+    .equations_text{width: 100%; height: 100%; margin: 0 auto; opacity: 0;}
+    .equations:hover .equations_text{opacity: 0.63; background: #afcfdd; transition: 1.15s;}
+    /* galileo_box(+text) end */
+
+
+
+
+
+
+
+  </style>
+
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.js"></script>
+  <script>
+    $(function(){
+      $(".gaga").click(function(){
+      $(".gaga_box").fadeIn();
+      $(".galileo_box").hide();
+      $(".nitta_box").hide();
+      $(".short_box").hide();
+      });
+
+      $(".galileo").click(function(){
+      $(".gaga_box").hide();
+      $(".galileo_box").fadeIn();
+      $(".nitta_box").hide();
+      $(".short_box").hide();
+      });
+
+      $(".nitta").click(function(){
+      $(".gaga_box").hide();
+      $(".galileo_box").hide();
+      $(".nitta_box").fadeIn();
+      $(".short_box").hide();
+      });
+
+      $(".short").click(function(){
+      $(".gaga_box").hide();
+      $(".galileo_box").hide();
+      $(".nitta_box").hide();
+      $(".short_box").fadeIn();
+      });
+    });
+  </script>
 
 </head>
 <body>
@@ -43,8 +184,8 @@
     <nav>
         <ul>
             <li><a href="index.html">MAIN</a></li>
-            <li>DESCRIPTION</li>
-            <li>DETAIL</li>
+            <li><a href="#">DESCRIPTION</a></li>
+            <li><a href="#">DETAIL</a></li>
         </ul>
     </nav>
 </header>
@@ -73,39 +214,120 @@
         </p>
     </div>
 
+  <div class="master">
 
-<div class="master">
-    <div class="master_1"></div>
-    <div class="master_2"></div>
-    <div class="master_3"></div>
-</div>
+      <div class="master_1">
+        <div class="master_img1">
+          <img src="img/main/master/after_school.jpg" alt="master_1_img">
+        </div>
+        txt place
+      </div>
+
+      <div class="master_2">
+        <div class="master_img2">
+        <img src="img/main/master/blizzard.jpg" alt="master_2_img">
+        </div>
+        txt place
+      </div>
+
+      <div class="master_3">
+        <div class="master_img3">
+          <img src="img/main/master/namiya.jpg" alt="master_3_img">
+        </div>
+        txt place
+      </div>
+
+  </div>
 
 <div class="puzzle">
 
     <div class="move">
-        <ul class ="choice">
-            <li class="gaga">가가 형사 시리즈</li>
-            <li class="galileo">탐정 갈릴레오 시리즈</li>
-            <li class="nitta">매스커레이드 시리즈</li>
-            <li class="short">단편 작품</li>
-        </ul>
-
-        <div class="gaga_box">
-            <div class="graduation"><img src="#" alt="graduation_img"></div>
-            <div class="twokiller"><img src="#" alt="twokiller_img"></div>
-            <div class="malice"><img src="#" alt="malice_img"></div>
-            <div class="lie"><img src="#" alt="lie_img"></div>
-            <div class="kirin"><img src="#" alt="kirin_img"></div>
-            <div class="red_finger"><img src="#" alt="red_finger_img"></div>
+        <div class ="choice">
+            <div class="gaga">가가 형사 시리즈</div>
+            <div class="galileo">탐정 갈릴레오 시리즈</div>
+            <div class="nitta">매스커레이드 시리즈</div>
+            <div class="short">단편 작품</div>
         </div>
 
+        <div class="gaga_box">
+
+            <div class="graduation">
+              <div class="graduation_text">
+                txt test
+              </div>
+            </div>
+
+            <div class="twokiller">
+              <div class="twokiller_text">
+                txt
+              </div>
+            </div>
+
+            <div class="malice">
+              <div class="malice_text">
+                txt
+              </div>
+            </div>
+
+            <div class="lie">
+              <div class="lie_text">
+                txt
+              </div>
+             </div>
+
+            <div class="kirin">
+              <div class="kirin_text">
+                txt
+              </div>
+            </div>
+
+            <div class="red_finger">
+              <div class="red_finger_text">
+                txt
+              </div>
+            </div>
+
+        </div>
+
+
         <div class="galileo_box">
-            <div class="detective"><img src="#" alt="detective_img"></div>
-            <div class="prophetic"><img src="#" alt="prophetic_img"></div>
-            <div class="suspect_x"><img src="#" alt="suspect_x_img"></div>
-            <div class="saint"><img src="#" alt="saint_img"></div>
-            <div class="angulsh"><img src="#" alt="angulsh_img"></div>
-            <div class="equations"><img src="#" alt="equations"></div>
+
+            <div class="detective">
+              <div class="detective_text">
+                txt
+              </div>
+            </div>
+
+            <div class="prophetic">
+              <div class="prophetic_text">
+                txt
+              </div>
+            </div>
+
+            <div class="suspect_x">
+              <div class="suspect_x_text">
+                txt
+              </div>
+            </div>
+
+            <div class="saint">
+              <div class="saint_text">
+                txt
+              </div>
+            </div>
+
+            <div class="angulsh">
+              <div class="angulsh_text">
+                txt
+              </div>
+            </div>
+
+            <div class="equations">
+              <div class="equations_text">
+                txt
+              </div>
+            </div>
+
         </div>
 
         <div class="nitta_box">
@@ -133,20 +355,22 @@
                 <div class="namiya"><img src="#" alt="namiya_img"></div>
                 <div class="watchman"><img src="#" alt="watchman_img"></div>
             </div>
+
         </div>
 
     </div>
+  </div>
 
-    <div class="etc">
+  <div class="etc">
 
-        <div class="after_school"><img src="#" alt="after_school_img">방과 후 txt</div>
-        <div class="maskcabin"><img src="#" alt="maskcabin_img">가면산장 살인사건 txt</div>
-        <div class="mother_goose"><img src="#" alt="mother_goose_img">백마산장 살인사건 txt</div>
-        <div class="meteor"><img src="#" alt="meteor_img">유성의 인연 txt</div>
-        <div class="date"><img src="#" alt="date_img">연애의 행방 txt</div>
-        <div class="classmate"><img src="#" alt="classmate_img">동급생 txt</div>
+    <div class="after_school"><img src="#" alt="after_school_img">방과 후 txt</div>
+    <div class="maskcabin"><img src="#" alt="maskcabin_img">가면산장 살인사건 txt</div>
+    <div class="mother_goose"><img src="#" alt="mother_goose_img">백마산장 살인사건 txt</div>
+    <div class="meteor"><img src="#" alt="meteor_img">유성의 인연 txt</div>
+    <div class="date"><img src="#" alt="date_img">연애의 행방 txt</div>
+    <div class="classmate"><img src="#" alt="classmate_img">동급생 txt</div>
 
-    </div>
+  </div>
 
     <footer>
 
@@ -160,8 +384,8 @@
         </div>
 
     </footer>
+ 
 
-</div>
 
 </body>
 </html>
