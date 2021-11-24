@@ -44,7 +44,7 @@
     /* series end */
 
     /* master start */
-    .master{width:1200px; height: 400px; margin: 0 auto; margin-top: 200px; margin-bottom: 200px; display: flex; justify-content: space-around; text-align: center; color: #fff;}
+    .master{width:1200px; height: 400px; margin: 0 auto; margin-top: 100px; margin-bottom: 100px; display: flex; justify-content: space-around; text-align: center; color: #fff;}
     .master img{width: 100%; height: 100%; }
     .master img:hover{transform: scale(1.2); transition:1s;}
     .master_1, .master_2, .master_3{width: 300px; height: 400px; float: left; margin-top: 50px;}
@@ -53,20 +53,15 @@
     /* master end */
 
     /* puzzle start */
-
-    .nitta_box, .short_box{display: none;}
-
-
-
-    .puzzle{width: 1200px; height: 1060px; margin: 0 auto;}
-    .move{width: 1200px; height: 40px;margin: 0 auto; }
-    .choice{width: 1190px; height: 100%;  margin-left: 10px;}
-    .choice>div{width: 292.5px; height: 40px; float: left; padding:10px 0; text-align: center; cursor: pointer; margin: 0 2.5px 0 2.5px; background-color: #333; border-top-right-radius: 2px; border-top-left-radius:2px; color:#eee;}
+    .puzzle{width: 1200px; height: 1060px; margin: 0 auto; position: relative; z-index: 7;}
+    .move{width: 1200px; height: 40px; margin: 0 auto; }
+    .choice{width: 1000px; height: 100%; margin: 0 auto;}
+    .choice>div{width: 239px; height: 40px; float: left; padding:10px 0; text-align: center; cursor: pointer; margin: 0 2.5px 0 2.5px; background-color: #333; border-top-right-radius: 2px; border-top-left-radius:2px; color:#eee; position: relative; left: 1%;}
     .choice>div:hover{background: #fff; color: #000; transition: 0.7s;}
     
     /* gaga_box(+text) start */
-    .gaga_box{width: 1200px; height: 1020px; }
-    .gaga_box>div{width: 390px; height: 500px; float: left; margin: 5px 5px; }
+    .gaga_box{width: 1000px; height: 850px; margin: 0 auto; display: flex; justify-content: space-around; flex-wrap: wrap; }
+    .gaga_box>div{width: 300px; height: 400px; float: left; margin: 0 auto; margin-top: 20px; background-size: cover; }
 
     /* graduation */
     .graduation{background: url(img/main/puzzle/gaga/graduation.jpg);}
@@ -101,9 +96,9 @@
     /* gaga_box(+text) end */
 
     /* galileo_box(+text) start */
-    .galileo_box{width: 1200px; height: 1020px; display: none;}
-    .galileo_box>div{width: 390px; height: 500px; float: left; margin: 5px 5px; }
-
+    .galileo_box{width: 1000px; height: 850px; margin: 0 auto; display: none; justify-content: space-around; flex-wrap: wrap;}
+    .galileo_box>div{width: 300px; height: 400px; float: left; margin: 0 auto; margin-top: 20px; background-size: cover;}
+    
     /* detective */
     .detective{background: url(img/main/puzzle/galileo/detective.jpg);}
     .detective_text{width: 100%; height: 100%; margin: 0 auto; opacity: 0;}
@@ -137,11 +132,44 @@
     /* galileo_box(+text) end */
 
 
+    /* nitta_box start */
+    .nitta_box{width: 970px; height: 630px; position:relative; right: 1px; margin: 0 auto; margin-top: 20px; background-color: #333; display: none; color: #fff; text-align: center; font-size: 14px;}
+    .nitta_box>div{width: 230px; height: 320px; float: left;}
+    .nitta_box>div img{width: 230px; height: 320px;}
+    .nitta_box .img_zone{width: 970px; height: 320px; display: flex; justify-content: space-around; margin: 0 auto; margin-top: 70px; margin-bottom: 40px;}
+    /* nitta_box end */
+
+    /* short_box start */
+    .short_box{width: 970px; height: 900px; position:relative; right: 1px; margin: 0 auto; margin-top: 20px;display: none; color:#fff; text-align: center;}
+    .short_box h1{font-size: 26px;}
+    .short_box>div{width: 970px; height: 300px;}
+    .short_img{width: 600px; height: 160px; margin:0 auto; }
+    .short_img>div{width: 115px; height: 260px;}
+    .mana,.bye_shinobu,.watchman{float: right;}
+    .short_img>div:not(.mana,.bye_shinobu,.watchman){float: left;}
 
 
 
 
+    /* short_boxc end */
+    /* puzzle end */
 
+    /* etc start */
+    .etc{width: 1200px; height: 750px; margin: 0 auto;}
+    .etc_img_zone{width: 1200px; height: 750px; display: flex; justify-content: space-around; flex-wrap: wrap; }
+    .etc_img_zone>div:not(.etc_text_zone){width: 250px; height: 360px; float: left; }
+    .etc_text_zone{width: 550px; height: 360px; text-align: center; color:#fff; float: left;}
+    .sub_button {width: 200px; height: 60px; background: #fff; color: #000; padding-top: 15px; margin: 0 auto;}
+    .etc_text_zone a:link, :visited, :active{color:#000;}
+    .after_school_text, .maskcabin_text, .mother_goose_text, .meteor_text, .date_text, .classmate_text{width: 100%; height: 100%; background-color: #fff; color:#000; opacity: 0;}
+    .after_school:hover .after_school_text, .maskcabin:hover .maskcabin_text, .moother_goose:hover .moother_goose_text, .meteor:hover .meteor_text, .date:hover .date_text, .classmate:hover .classmate_text {opacity: 0.63; transition: 1.15s;}
+    .after_school{background: url(img/main/etc/after_school.jpg);}
+    .maskcabin{background: url(img/main/etc/maskcabin.jpg);}
+    .mother_goose{background: url(img/main/etc/mother_goose.jpg);}
+    .meteor{background: url(img/main/etc/meteor.jpg);}
+    .date{background: url(img/main/etc/date.jpg);}
+    .classmate{background: url(img/main/etc/classmate.jpg);}
+  
   </style>
 
   <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.js"></script>
@@ -156,7 +184,7 @@
 
       $(".galileo").click(function(){
       $(".gaga_box").hide();
-      $(".galileo_box").fadeIn();
+      $(".galileo_box").css("display","flex").hide().fadeIn();
       $(".nitta_box").hide();
       $(".short_box").hide();
       });
@@ -239,137 +267,154 @@
 
   </div>
 
-<div class="puzzle">
 
-    <div class="move">
-        <div class ="choice">
-            <div class="gaga">가가 형사 시리즈</div>
-            <div class="galileo">탐정 갈릴레오 시리즈</div>
-            <div class="nitta">매스커레이드 시리즈</div>
-            <div class="short">단편 작품</div>
-        </div>
+  <div class="puzzle">
 
-        <div class="gaga_box">
+      <div class="move">
+          <div class ="choice">
+              <div class="gaga">가가 형사 시리즈</div>
+              <div class="galileo">탐정 갈릴레오 시리즈</div>
+              <div class="nitta">매스커레이드 시리즈</div>
+              <div class="short">단편 작품</div>
+          </div>
 
-            <div class="graduation">
-              <div class="graduation_text">
-                txt test
+          <div class="gaga_box">
+
+              <div class="graduation">
+                <div class="graduation_text">
+                  txt test
+                </div>
               </div>
-            </div>
 
-            <div class="twokiller">
-              <div class="twokiller_text">
-                txt
+              <div class="twokiller">
+                <div class="twokiller_text">
+                  txt
+                </div>
               </div>
-            </div>
 
-            <div class="malice">
-              <div class="malice_text">
-                txt
+              <div class="malice">
+                <div class="malice_text">
+                  txt
+                </div>
               </div>
-            </div>
 
-            <div class="lie">
-              <div class="lie_text">
-                txt
+              <div class="lie">
+                <div class="lie_text">
+                  txt
+                </div>
               </div>
-             </div>
 
-            <div class="kirin">
-              <div class="kirin_text">
-                txt
+              <div class="kirin">
+                <div class="kirin_text">
+                  txt
+                </div>
               </div>
-            </div>
 
-            <div class="red_finger">
-              <div class="red_finger_text">
-                txt
+              <div class="red_finger">
+                <div class="red_finger_text">
+                  txt
+                </div>
               </div>
-            </div>
 
-        </div>
+          </div>
 
 
-        <div class="galileo_box">
+          <div class="galileo_box">
 
-            <div class="detective">
-              <div class="detective_text">
-                txt
+              <div class="detective">
+                <div class="detective_text">
+                  txt
+                </div>
               </div>
-            </div>
 
-            <div class="prophetic">
-              <div class="prophetic_text">
-                txt
+              <div class="prophetic">
+                <div class="prophetic_text">
+                  txt
+                </div>
               </div>
-            </div>
 
-            <div class="suspect_x">
-              <div class="suspect_x_text">
-                txt
+              <div class="suspect_x">
+                <div class="suspect_x_text">
+                  txt
+                </div>
               </div>
-            </div>
 
-            <div class="saint">
-              <div class="saint_text">
-                txt
+              <div class="saint">
+                <div class="saint_text">
+                  txt
+                </div>
               </div>
-            </div>
 
-            <div class="angulsh">
-              <div class="angulsh_text">
-                txt
+              <div class="angulsh">
+                <div class="angulsh_text">
+                  txt
+                </div>
               </div>
-            </div>
 
-            <div class="equations">
-              <div class="equations_text">
-                txt
+              <div class="equations">
+                <div class="equations_text">
+                  txt
+                </div>
               </div>
+
+          </div>
+
+          <div class="nitta_box">
+    
+            <div class="img_zone">
+              <div class="hotel"><img src="img/main/puzzle/maquerade/lie.jpg" alt="hotel_img"></div>
+              <div class="eve"><img src="img/main/puzzle/maquerade/lie.jpg" alt="eve_img"></div>
+              <div class="night"><img src="img/main/puzzle/maquerade/malice.jpg" alt="night_img"></div>
             </div>
+            <h1>고객의 가면을 쓰고 있는 연쇄 살인범을 밝혀라 ! <br> 히가시노 게이고 작가의 현대판 신작 <br><br>"매스커레이드 시리즈"</h1>
 
-        </div>
+          </div>
 
-        <div class="nitta_box">
-            <div class="hotel"><img src="#" alt="hotel_img"></div>
-            <div class="eve"><img src="#" alt="eve_img"></div>
-            <div class="night"><img src="#" alt="night_img"></div>
-        </div>
+          <div class="short_box">
 
-        <div class="short_box">
+              <div class="laplace"><br>
+                <h1>라플라스 시리즈</h1><br><p>sub txt</p><br>
+                <div class="short_img">
+                  <div class="witch"><img src="img/main/puzzle/short/laplace/witch.jpg" alt="witch_img"></div>
+                  <div class="mana"><img src="img/main/puzzle/short/laplace/mana.jpg" alt="mana_img"></div>
+                </div>
+              </div>
 
-            <div class="laplace">
-                <h1>라플라스 시리즈</h1>
-                <div class="witch"><img src="#" alt="witch_img"></div>
-                <div class="mana"><img src="#" alt="mana_img"></div>
-            </div>
+              <div class="shinobu">
+                <h1>시노부 선생 시리즈</h1><br><p>sub txt</p><br>
+                <div class="short_img">
+                  <div class="osaka"><img src="img/main/puzzle/short/shinobu/osaka.jpg" alt="osaka_img"></div>
+                  <div class="bye_shinobu"><img src="img/main/puzzle/short/shinobu/bye_shinobu.jpg" alt="bye_shinobu_img"></div>
+                </div>
+              </div>
 
-            <div class="shinobu">
-                <h1>시노부 선생 시리즈</h1>
-                <div class="osaka"><img src="#" alt="osaka_img"></div>
-                <div class="bye_shinobu"><img src="#" alt="bye_shinobu_img"></div>
-            </div>
+              <div class="touching">
+                <h1>히가시노 게이고의 이면</h1><br><p>sub txt</p><br>
+                <div class="short_img">
+                  <div class="namiya"><img src="img/main/puzzle/short/touching/namiya.jpg" alt="namiya_img"></div>
+                  <div class="watchman"><img src="img/main/puzzle/short/touching/watchman.jpg" alt="watchman_img"></div>
+                </div> 
+              </div>
 
-            <div class="touching">
-                <h1>히가시노 게이고의 이면</h1>
-                <div class="namiya"><img src="#" alt="namiya_img"></div>
-                <div class="watchman"><img src="#" alt="watchman_img"></div>
-            </div>
+          </div>
 
-        </div>
-
+      </div>
     </div>
-  </div>
 
   <div class="etc">
 
-    <div class="after_school"><img src="#" alt="after_school_img">방과 후 txt</div>
-    <div class="maskcabin"><img src="#" alt="maskcabin_img">가면산장 살인사건 txt</div>
-    <div class="mother_goose"><img src="#" alt="mother_goose_img">백마산장 살인사건 txt</div>
-    <div class="meteor"><img src="#" alt="meteor_img">유성의 인연 txt</div>
-    <div class="date"><img src="#" alt="date_img">연애의 행방 txt</div>
-    <div class="classmate"><img src="#" alt="classmate_img">동급생 txt</div>
-
+    <div class="etc_img_zone">
+      <div class="etc_text_zone">
+        <h1>etc text</h1><br><p>etc sub text</p>
+        <a href="#"><div class="sub_button">더 많은 작품 알아보기</div></a>
+      </div>
+      <div class="after_school"><div class="after_school_text">text</div></div>
+      <div class="maskcabin"></div>
+      <div class="mother_goose"></div>
+      <div class="meteor"></div>
+      <div class="date"></div>
+      <div class="classmate"></div>
+    </div>
   </div>
 
     <footer>
