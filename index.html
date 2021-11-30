@@ -11,6 +11,187 @@
     body{background: #222;}
     a:link,a:active,a:visited{color:#fff;}
 
+    @media (max-width:599px){
+          /* header start */
+    header{width: 100%; height: 100px; margin: 0 auto; text-align: center; background: transparent; background: #212121;}  
+    nav{width: 100%; margin:0 auto}
+    nav ul{display: flex; flex-direction: row; justify-content: space-around; margin: 0 auto; font-size: 18px; color: #fff;}
+    nav ul li{ float: left; margin: 0 auto; padding: 38px 0;}
+    nav ul li a:link{color:#fff;}
+    nav ul li a:visited{color:#fff;}
+    /* header end */
+
+    /* main_banner start */
+    .main_banner_cover{background: #212121;}
+    .main_banner{width: 100%; height: 300px; margin: 0 auto;}
+    .main_banner img{width: 100%; height: 100%;}
+    /* main_banner end */
+ 
+    /* series start */
+    .series{width: 100%; height: 300px; margin: 0 auto; overflow: hidden; margin-top: 50px; opacity: 0; margin-bottom: -300px; max-width:100%;}
+    .series img{width: 100%; height: 100%;}
+    .series input{display:none;}
+    .series ul{width:calc(100% * 3); display:flex; transition:1s; }
+    .series li{width:calc(100% / 3); height:300px;}
+    .series li:nth-child(1){background:url(img/main/series_banner/gaga.jpg); background-size: 100% 100%; background-repeat: no-repeat;}
+    .series li:nth-child(2){background:url(img/main/series_banner/galileo.jpg); background-size: 100% 100%; background-repeat: no-repeat;}
+    .series li:nth-child(3){background:url(img/main/series_banner/masquerade.jpg); background-size: 100% 100%; background-repeat: no-repeat;}
+    /* series -- slide_button start */
+    .slide_button{position:relative;bottom:35px;left:0;right:0;text-align:center;z-index:2;}
+    .slide_button label{width:25px; height:4px; border-radius:10px; border:2px solid #aaa; display:inline-block; background:#fff; font-size:0; transition:0.5s; cursor:pointer;}
+    #pos1:checked ~ ul{margin-left:0.1%; transition: 1.3s;}
+    #pos2:checked ~ ul{margin-left:-100%; transition: 1.3s; }
+    #pos3:checked ~ ul{margin-left:-200%; transition: 1.3s;}
+    #pos1:checked ~ .slide_button label:nth-child(1),
+    #pos2:checked ~ .slide_button label:nth-child(2),
+    #pos3:checked ~ .slide_button label:nth-child(3){background:#aaa;}
+    /* series -- slide_button end */
+    /* series end */
+
+    /* master start */
+    .master{width:100%; height: 1600px; margin: 0 auto; margin-bottom: 100px; display: flex; justify-content: space-around; flex-wrap: wrap; text-align: center; color: #fff; opacity: 0; margin-bottom: -300px; max-width:100%; font-size: 12px;}
+    .master img{width: 70%; height: 100%; }
+    .master img:hover{transform: scale(1.2); transition:1s;}
+    .master_1, .master_2, .master_3{width: 100% ;height: 30%; float: left; margin-top: 50px;}
+    .master_img1, .master_img2, .master_img3{width: 80%; height: 80%; margin: 10% auto;}
+
+    /* master end */
+
+    /* puzzle start */
+    .puzzle{width: 100%; height: 1060px; margin: 0 auto; position: relative; opacity: 0; margin-bottom: -300px; max-width:100%; text-align:center; }
+    .puzzle p{font-weight: bold;}
+    .move{width: 100%; height: 40px; margin: 0 auto; font-size: 10px;}
+    .choice{width: 100%; height: 100%; margin: 0 auto; position: relative; left: 5px;}
+    .choice>div{width: 23%; height: 40px; float: left; padding:10px 0; text-align: center; cursor: pointer; margin: 0 2.5px 0 2.5px; background-color: #333; border-top-right-radius: 2px; border-top-left-radius:2px; color:#eee; position: relative; left: 1%;}
+    .choice>div:hover{background: #fff; color: #000; transition: 0.7s;}
+    
+    /* gaga_box(+text) start */
+    .gaga_box{width: 100% ;height: 850px; margin: 0 auto; display: flex; justify-content: space-around; flex-wrap: wrap; font-size: 8px;}
+    .gaga_box p {font-size: 10px;}
+    .gaga_box>div{width: 40%; height: 35%; float: left; margin: 0 auto; margin-top: 20px; background-size: 100% 100%; }
+
+    /* graduation */
+    .graduation{background: url(img/main/puzzle/gaga/graduation.jpg);}
+    .graduation_text{width: 100%; height: 100%; margin: 0 auto; opacity: 0; padding:47% 0 0 0;}
+    .graduation:hover .graduation_text{opacity: 0.63; background: #afcfdd; transition: 1.15s;}
+
+    /* twokiller */
+    .twokiller{background: url(img/main/puzzle/gaga/twokiller.jpg);}
+    .twokiller p{font-weight: bold; }
+    .twokiller_text{width: 100%; height: 100%; margin: 0 auto; opacity: 0; padding:35% 0 0 0;}
+    .twokiller:hover .twokiller_text{opacity: 0.63; background: #afcfdd; transition: 1.15s;}
+    .twokiller:hover .twokiller_text{opacity: 0.63; background: #afcfdd; transition: 1.15s;}
+
+    /* malice */
+    .malice{background: url(img/main/puzzle/gaga/malice.jpg);}
+    .malice_text{width: 100%; height: 100%; margin: 0 auto; opacity: 0; padding:45% 0 0 0;}
+    .malice:hover .malice_text{opacity: 0.63; background: #afcfdd; transition: 1.15s;}
+
+    /* lie */
+    .lie{background: url(img/main/puzzle/gaga/lie.jpg);}
+    .lie_text{width: 100%; height: 100%; margin: 0 auto; opacity: 0; padding:45% 0 0 0;}
+    .lie:hover .lie_text{opacity: 0.63; background: #afcfdd; transition: 1.15s;}
+
+    /* kirin */
+    .kirin{background: url(img/main/puzzle/gaga/kirin.jpg);}
+    .kirin_text{width: 100%; height: 100%; margin: 0 auto; opacity: 0; padding:45% 0 0 0;}
+    .kirin:hover .kirin_text{opacity: 0.63; background: #afcfdd; transition: 1.15s;}
+      
+    /* red_finger */
+    .red_finger{background: url(img/main/puzzle/gaga/red_finger.jpg);}
+    .red_finger_text{width: 100%; height: 100%; margin: 0 auto; opacity: 0;  padding:45% 0 0 0;}
+    .red_finger:hover .red_finger_text{opacity: 0.63; background: #afcfdd; transition: 1.15s;}      
+    /* gaga_box(+text) end */
+
+    /* galileo_box(+text) start */
+    .galileo_box{width: 100%; height: 850px; margin: 0 auto; display: none; justify-content: space-around; flex-wrap: wrap; font-size:  8px;}
+    .galileo_box>div{width: 40%; height: 35%; float: left; margin: 0 auto; margin-top: 20px; background-size: 100% 100%;}
+    
+    /* detective */
+    .detective{background: url(img/main/puzzle/galileo/detective.jpg);}
+    .detective_text{width: 100%; height: 100%; margin: 0 auto; opacity: 0; padding:45% 0 0 0;}
+    .detective:hover .detective_text{opacity: 0.63; background: #afcfdd; transition: 1.15s;}
+
+    /* prophetic */
+    .prophetic{background: url(img/main/puzzle/galileo/prophetic.jpg);}
+    .prophetic img{width: 100%; height: 100%;}
+    .prophetic_text{width: 100%; height: 100%; margin: 0 auto; opacity: 0; padding:40% 0 0 0;}
+    .prophetic:hover .prophetic_text{opacity: 0.63; background: #afcfdd; transition: 1.15s;}
+
+    /* suspect_x */
+    .suspect_x{background: url(img/main/puzzle/galileo/suspect_x.jpg);}
+    .suspect_x_text{width: 100%; height: 100%; margin: 0 auto; opacity: 0; padding:40% 0 0 0;}
+    .suspect_x:hover .suspect_x_text{opacity: 0.63; background: #afcfdd; transition: 1.15s;}
+
+    /* saint */
+    .saint{background: url(img/main/puzzle/galileo/saint.jpg);}
+    .saint_text{width: 100%; height: 100%; margin: 0 auto; opacity: 0; padding:45% 0 0 0;}
+    .saint:hover .saint_text{opacity: 0.63; background: #afcfdd; transition: 1.15s;}
+
+    /* angulsh */
+    .angulsh{background:url(img/main/puzzle/galileo/angulsh.jpg) ;}
+    .angulsh_text{width: 100%; height: 100%; margin: 0 auto; opacity: 0; padding:40% 0 0 0;}
+    .angulsh:hover .angulsh_text{opacity: 0.63; background: #afcfdd; transition: 1.15s;}
+
+    /* equations */
+    .equations{background: url(img/main/puzzle/galileo/equation.jpg);}
+    .equations_text{width: 100%; height: 100%; margin: 0 auto; opacity: 0; padding:40% 0 0 0;}
+    .equations:hover .equations_text{opacity: 0.63; background: #afcfdd; transition: 1.15s;}
+    /* galileo_box(+text) end */
+
+
+    /* nitta_box start */
+    .nitta_box{width: 100%; height: 630px; position:relative; right: 1px; margin: 0 auto; margin-top: 20px; background-color: #333; display: none; color: #fff; text-align: center; font-size: 10px;}
+    .nitta_box>div{width: 30%; height: 320px; float: left;}
+    .nitta_box>div img{width: 100%; height: 80%;}
+    .nitta_box .img_zone{width: 100%; height: 320px; display: flex; justify-content: space-around; margin: 0 auto; margin-top: 70px; margin-bottom: 40px;}
+    .img_zone>div{margin: 0 2%;}
+    /* nitta_box end */
+
+    /* short_box start */
+    .short_box{width: 100%; height: 900px; position:relative; right: 1px; margin: 0 auto; margin-top: 20px;display: none; color:#fff; text-align: center;}
+    .short_box h1{font-size: 13px;}
+    .short_box>div{width: 100%; height: 300px;}
+    .short_img{width: 100%; height: 160px; margin:0 auto; }
+    .short_img>div{width: 30%; height: 260px;}
+    .mana,.bye_shinobu,.watchman{float: right;}
+    .short_img>div:not(.mana,.bye_shinobu,.watchman){float: left;}
+
+
+
+
+    /* short_boxc end */
+    /* puzzle end */
+
+    /* etc start */
+    .etc{width: 100%; height: 450px; margin: 0 auto; opacity: 0; margin-bottom: -300px; max-width:100%; font-size: 8px; text-align: center;}
+    .etc_img_zone{width: 100%; height: 100%; display: flex; justify-content: space-around; flex-wrap: wrap; }
+    .etc_img_zone>div:not(.etc_text_zone){width: 20%; height: 35%; float: left; }
+    .etc_text_zone{width: 45%; height: 35%; text-align: center; color:#fff; float: left;}
+    .sub_button {width: 120px; height: 40px; background: #fff; color: #000; padding-top: 3%; margin: 0 auto;}
+    .sub_button:hover{ background: #000; color: #fff; border:1px solid #fff; transition: 1.5s;}
+    .etc_text_zone a:link, :visited, :active{color:#000;}
+    .after_school_text, .maskcabin_text, .mother_goose_text, .meteor_text, .date_text, .classmate_text{width: 100%; height: 100%; background-color: #000; opacity: 0;}
+    .after_school:hover .after_school_text, .maskcabin:hover .maskcabin_text, .mother_goose:hover .mother_goose_text, .meteor:hover .meteor_text, .date:hover .date_text, .classmate:hover .classmate_text {opacity: 0.43; transition: 1.15s;}
+    .text_button{width: 70%; height: 20%; background: #fff; text-align: center; padding: 10% 0 0 0; margin: 0 auto; position: relative; top:40% ; cursor: pointer;}    
+    .after_school{background: url(img/main/etc/after_school.jpg); background-size: 100% 100%;}
+    .maskcabin{background: url(img/main/etc/maskcabin.jpg); background-size: 100% 100%;}
+    .mother_goose{background: url(img/main/etc/mother_goose.jpg); background-size: 100% 100%;}
+    .meteor{background: url(img/main/etc/meteor.jpg); background-size: 100% 100%;}
+    .date{background: url(img/main/etc/date.jpg); background-size: 100% 100%;}
+    .classmate{background: url(img/main/etc/classmate.jpg); background-size: 100% 100%;}
+    /* etc end */
+  
+    /* footer start */
+    footer{width: 100%; height: 200px; color:#fff; text-align: center; margin: 0 auto; margin-top: 120px; }
+    footer p{font-size: 28px; font-weight: bold;}
+    .ft_nav{width: 100%; height: 100%; margin: 0 auto; text-align: center; border-top: 1px solid #444;}
+    .ft_nav ul{width: 100%; height: 20px; margin: 0 auto;}
+    .ft_nav ul li{width: 33.3%; height: 20px; margin: 0 auto; float:left;}
+
+    }
+
+
     @media(min-width:600px) and (max-width:1199px){
       /* header start */
     header{width: 100%; height: 100px; margin: 0 auto; text-align: center; background: transparent; background: #212121;}  
@@ -51,144 +232,143 @@
     .master{width:100%; height: 450px; margin: 0 auto; margin-top: 100px; margin-bottom: 100px; display: flex; justify-content: space-around; text-align: center; color: #fff; opacity: 0; margin-bottom: -300px; max-width:100%;}
     .master img{width: 100%; height: 100%; }
     .master img:hover{transform: scale(1.2); transition:1s;}
-    .master_1, .master_2, .master_3{width: 33%px; height: 80%; float: left; margin-top: 50px;}
+    .master_1, .master_2, .master_3{width: 33%; height: 80%; float: left; margin-top: 50px;}
     .master_img1, .master_img2, .master_img3{width: 80%px; height: 80%; margin: 40px 50px;}
     .master_img2{border: 1px solid #eee;}
     /* master end */
 
     /* puzzle start */
-    .puzzle{width: 1200px; height: 1060px; margin: 0 auto; position: relative; opacity: 0; margin-bottom: -300px; max-width:100%; font-size: 12px; text-align:center;}
+    .puzzle{width: 100%; height: 1200px; margin: 0 auto; position: relative; opacity: 0; margin-bottom: -300px; max-width:100%; font-size: 12px; text-align:center;}
     .puzzle p{font-weight: bold; font-size: 14px;}
-    .move{width: 1200px; height: 40px; margin: 0 auto; }
-    .choice{width: 1000px; height: 100%; margin: 0 auto;}
-    .choice>div{width: 239px; height: 40px; float: left; padding:10px 0; text-align: center; cursor: pointer; margin: 0 2.5px 0 2.5px; background-color: #333; border-top-right-radius: 2px; border-top-left-radius:2px; color:#eee; position: relative; left: 1%;}
+    .move{width: 100%; height: 40px; margin: 0 auto; }
+    .choice{width: 100%; height: 100%; margin: 0 auto; position: relative; left: 20px;}
+    .choice>div{width: 23%; height: 40px; float: left; padding:10px 0; text-align: center; cursor: pointer; margin: 0 2.5px 0 2.5px; background-color: #333; border-top-right-radius: 2px; border-top-left-radius:2px; color:#eee; position: relative; left: 1%;}
     .choice>div:hover{background: #fff; color: #000; transition: 0.7s;}
     
     /* gaga_box(+text) start */
-    .gaga_box{width: 1000px; height: 850px; margin: 0 auto; display: flex; justify-content: space-around; flex-wrap: wrap; }
-    .gaga_box>div{width: 300px; height: 400px; float: left; margin: 0 auto; margin-top: 20px; background-size: cover; }
+    .gaga_box{width: 100%; height: 850px; margin: 0 auto; display: flex; justify-content: space-around; flex-wrap: wrap; }
+    .gaga_box>div{width: 30%; height: 47%; float: left; margin: 0 auto; margin-top: 20px; background-size: 100% 100%; }
 
     /* graduation */
     .graduation{background: url(img/main/puzzle/gaga/graduation.jpg);}
-    .graduation_text{width: 100%; height: 100%; margin: 0 auto; opacity: 0;}
+    .graduation_text{width: 100%; height: 100%; margin: 0 auto; opacity: 0; padding: 35% 0 0 0;}
     .graduation:hover .graduation_text{opacity: 0.63; background: #afcfdd; transition: 1.15s;}
 
     /* twokiller */
     .twokiller{background: url(img/main/puzzle/gaga/twokiller.jpg);}
     .twokiller p{font-size: 13.3px; font-weight: bold; }
-    .twokiller_text{width: 100%; height: 100%; margin: 0 auto; opacity: 0;}
+    .twokiller_text{width: 100%; height: 100%; margin: 0 auto; opacity: 0; padding: 35% 0 0 0;}
     .twokiller:hover .twokiller_text{opacity: 0.63; background: #afcfdd; transition: 1.15s;}
     .twokiller:hover .twokiller_text{opacity: 0.63; background: #afcfdd; transition: 1.15s;}
 
     /* malice */
     .malice{background: url(img/main/puzzle/gaga/malice.jpg);}
-    .malice_text{width: 100%; height: 100%; margin: 0 auto; opacity: 0;}
+    .malice_text{width: 100%; height: 100%; margin: 0 auto; opacity: 0; padding: 35% 0 0 0;}
     .malice:hover .malice_text{opacity: 0.63; background: #afcfdd; transition: 1.15s;}
 
     /* lie */
     .lie{background: url(img/main/puzzle/gaga/lie.jpg);}
-    .lie_text{width: 100%; height: 100%; margin: 0 auto; opacity: 0;}
+    .lie_text{width: 100%; height: 100%; margin: 0 auto; opacity: 0; padding: 35% 0 0 0;}
     .lie:hover .lie_text{opacity: 0.63; background: #afcfdd; transition: 1.15s;}
 
     /* kirin */
     .kirin{background: url(img/main/puzzle/gaga/kirin.jpg);}
-    .kirin_text{width: 100%; height: 100%; margin: 0 auto; opacity: 0;}
+    .kirin_text{width: 100%; height: 100%; margin: 0 auto; opacity: 0; padding: 35% 0 0 0;}
     .kirin:hover .kirin_text{opacity: 0.63; background: #afcfdd; transition: 1.15s;}
       
     /* red_finger */
     .red_finger{background: url(img/main/puzzle/gaga/red_finger.jpg);}
-    .red_finger_text{width: 100%; height: 100%; margin: 0 auto; opacity: 0;}
+    .red_finger_text{width: 100%; height: 100%; margin: 0 auto; opacity: 0; padding: 35% 0 0 0;}
     .red_finger:hover .red_finger_text{opacity: 0.63; background: #afcfdd; transition: 1.15s;}      
     /* gaga_box(+text) end */
 
     /* galileo_box(+text) start */
-    .galileo_box{width: 1000px; height: 850px; margin: 0 auto; display: none; justify-content: space-around; flex-wrap: wrap;}
-    .galileo_box>div{width: 300px; height: 400px; float: left; margin: 0 auto; margin-top: 20px; background-size: cover;}
+    .galileo_box{width: 100%; height: 850px; margin: 0 auto; display: none; justify-content: space-around; flex-wrap: wrap;}
+    .galileo_box>div{width: 30%; height: 47%; float: left; margin: 0 auto; margin-top: 20px; background-size: 100% 100%;}
     
     /* detective */
     .detective{background: url(img/main/puzzle/galileo/detective.jpg);}
-    .detective_text{width: 100%; height: 100%; margin: 0 auto; opacity: 0;}
+    .detective_text{width: 100%; height: 100%; margin: 0 auto; opacity: 0; padding: 35% 0 0 0;}
     .detective:hover .detective_text{opacity: 0.63; background: #afcfdd; transition: 1.15s;}
 
     /* prophetic */
     .prophetic{background: url(img/main/puzzle/galileo/prophetic.jpg);}
     .prophetic img{width: 100%; height: 100%;}
-    .prophetic_text{width: 100%; height: 100%; margin: 0 auto; opacity: 0;}
+    .prophetic_text{width: 100%; height: 100%; margin: 0 auto; opacity: 0; padding: 32% 0 0 0;}
     .prophetic:hover .prophetic_text{opacity: 0.63; background: #afcfdd; transition: 1.15s;}
 
     /* suspect_x */
     .suspect_x{background: url(img/main/puzzle/galileo/suspect_x.jpg);}
-    .suspect_x_text{width: 100%; height: 100%; margin: 0 auto; opacity: 0;}
+    .suspect_x_text{width: 100%; height: 100%; margin: 0 auto; opacity: 0; padding: 30% 0 0 0;}
     .suspect_x:hover .suspect_x_text{opacity: 0.63; background: #afcfdd; transition: 1.15s;}
 
     /* saint */
     .saint{background: url(img/main/puzzle/galileo/saint.jpg);}
-    .saint_text{width: 100%; height: 100%; margin: 0 auto; opacity: 0;}
+    .saint_text{width: 100%; height: 100%; margin: 0 auto; opacity: 0; padding: 37% 0 0 0;}
     .saint:hover .saint_text{opacity: 0.63; background: #afcfdd; transition: 1.15s;}
 
     /* angulsh */
-    .angulsh{background:url(img/main/puzzle/galileo/angulsh.jpg) ;}
-    .angulsh_text{width: 100%; height: 100%; margin: 0 auto; opacity: 0;}
+    .angulsh{background:url(img/main/puzzle/galileo/angulsh.jpg) ; }
+    .angulsh_text{width: 100%; height: 100%; margin: 0 auto; opacity: 0; padding: 35% 0 0 0;}
     .angulsh:hover .angulsh_text{opacity: 0.63; background: #afcfdd; transition: 1.15s;}
 
     /* equations */
     .equations{background: url(img/main/puzzle/galileo/equation.jpg);}
-    .equations_text{width: 100%; height: 100%; margin: 0 auto; opacity: 0;}
+    .equations_text{width: 100%; height: 100%; margin: 0 auto; opacity: 0; padding: 33% 0 0 0;}
     .equations:hover .equations_text{opacity: 0.63; background: #afcfdd; transition: 1.15s;}
     /* galileo_box(+text) end */
 
 
     /* nitta_box start */
-    .nitta_box{width: 970px; height: 630px; position:relative; right: 1px; margin: 0 auto; margin-top: 20px; background-color: #333; display: none; color: #fff; text-align: center; font-size: 14px;}
+    .nitta_box{width: 100%; height: 630px; position:relative; right: 1px; margin: 0 auto; margin-top: 20px; background-color: #333; display: none; color: #fff; text-align: center; font-size: 14px;}
     .nitta_box>div{width: 230px; height: 320px; float: left;}
     .nitta_box>div img{width: 230px; height: 320px;}
-    .nitta_box .img_zone{width: 970px; height: 320px; display: flex; justify-content: space-around; margin: 0 auto; margin-top: 70px; margin-bottom: 40px;}
+    .nitta_box .img_zone{width: 100%; height: 320px; display: flex; justify-content: space-around; margin: 0 auto; margin-top: 70px; margin-bottom: 40px;}
     /* nitta_box end */
 
     /* short_box start */
-    .short_box{width: 970px; height: 900px; position:relative; right: 1px; margin: 0 auto; margin-top: 20px;display: none; color:#fff; text-align: center;}
-    .short_box h1{font-size: 26px;}
-    .short_box>div{width: 970px; height: 300px;}
-    .short_img{width: 600px; height: 160px; margin:0 auto; }
+    .short_box{width: 100%; height: 900px; position:relative; right: 1px; margin: 0 auto; margin-top: 20px;display: none; color:#fff; text-align: center;}
+    .short_box h1{font-size: 18px;}
+    .short_box>div{width: 100%; height: 300px;}
+    .short_img{width: 50%; height: 160px; margin:0 auto; }
     .short_img>div{width: 115px; height: 260px;}
     .mana,.bye_shinobu,.watchman{float: right;}
     .short_img>div:not(.mana,.bye_shinobu,.watchman){float: left;}
 
 
-
-
-    /* short_boxc end */
+    /* short_box end */
     /* puzzle end */
 
     /* etc start */
-    .etc{width: 1200px; height: 750px; margin: 0 auto; opacity: 0; margin-bottom: -300px; max-width:100%; font-size: 14px; text-align: center;}
-    .etc_img_zone{width: 1200px; height: 750px; display: flex; justify-content: space-around; flex-wrap: wrap; }
-    .etc_img_zone>div:not(.etc_text_zone){width: 250px; height: 360px; float: left; }
-    .etc_text_zone{width: 550px; height: 360px; text-align: center; color:#fff; float: left;}
-    .sub_button {width: 200px; height: 60px; background: #fff; color: #000; padding-top: 15px; margin: 0 auto;}
+    .etc{width: 100%; height: 800px; margin: 0 auto; opacity: 0; margin-bottom: -300px; max-width:100%; font-size: 14px; text-align: center;}
+    .etc_img_zone{width: 100%; height: 100%; display: flex; justify-content: space-around; flex-wrap: wrap; }
+    .etc_img_zone>div:not(.etc_text_zone){width: 23%; height: 45%; float: left; margin: 1% 1%;}
+    .etc_text_zone{width: 50%; height: 50%; text-align: center; color:#fff; float: left;}
+    .sub_button {width: 200px; height: 60px; background: #fff; color: #000; padding-top: 15px; margin: 0 auto; font-weight: bold;}
     .sub_button:hover{ background: #000; color: #fff; border:1px solid #fff; transition: 1.5s;}
     .etc_text_zone a:link, :visited, :active{color:#000;}
-    .after_school_text, .maskcabin_text, .mother_goose_text, .meteor_text, .date_text, .classmate_text{width: 100%; height: 100%; background-color: #fff; color:#000; opacity: 0;}
-    .after_school:hover .after_school_text, .maskcabin:hover .maskcabin_text, .mother_goose:hover .mother_goose_text, .meteor:hover .meteor_text, .date:hover .date_text, .classmate:hover .classmate_text {opacity: 0.63; transition: 1.15s;}
-    .after_school{background: url(img/main/etc/after_school.jpg);}
-    .maskcabin{background: url(img/main/etc/maskcabin.jpg);}
-    .mother_goose{background: url(img/main/etc/mother_goose.jpg);}
-    .meteor{background: url(img/main/etc/meteor.jpg);}
-    .date{background: url(img/main/etc/date.jpg);}
-    .classmate{background: url(img/main/etc/classmate.jpg);}
+    .after_school_text, .maskcabin_text, .mother_goose_text, .meteor_text, .date_text, .classmate_text{width: 100%; height: 100%; background-color: #000; opacity: 0;}
+    .after_school:hover .after_school_text, .maskcabin:hover .maskcabin_text, .mother_goose:hover .mother_goose_text, .meteor:hover .meteor_text, .date:hover .date_text, .classmate:hover .classmate_text {opacity: 0.43; transition: 1.15s;}
+    .text_button{width: 70%; height: 15%; background: #fff; text-align: center; padding: 7% 0 0 0; margin: 0 auto; position: relative; top:40% ; cursor: pointer;}    
+    .after_school{background: url(img/main/etc/after_school.jpg); background-size: 100% 100%;}
+    .maskcabin{background: url(img/main/etc/maskcabin.jpg); background-size: 100% 100%;}
+    .mother_goose{background: url(img/main/etc/mother_goose.jpg); background-size: 100% 100%;}
+    .meteor{background: url(img/main/etc/meteor.jpg); background-size: 100% 100%;}
+    .date{background: url(img/main/etc/date.jpg); background-size: 100% 100%;}
+    .classmate{background: url(img/main/etc/classmate.jpg); background-size: 100% 100%;}
     /* etc end */
   
     /* footer start */
     footer{width: 100%; height: 200px; color:#fff; text-align: center; margin: 0 auto;margin-top: 200px; }
     footer p{font-size: 28px; font-weight: bold;}
-    .ft_nav{width: 1200px; height: 100%; margin: 0 auto; text-align: center; border-top: 1px solid #444;}
+    .ft_nav{width: 100%; height: 100%; margin: 0 auto; text-align: center; border-top: 1px solid #444;}
     .ft_nav ul{width: 100%; height: 20px; margin: 0 auto;}
     .ft_nav ul li{width: 33.3%; height: 20px; margin: 0 auto; float:left;}
 
     }
 
     @media (min-width:1200px){
-      /* header start */
+    /* header start */
     header{width: 100%; height: 100px; margin: 0 auto; text-align: center; background: transparent; background: #212121;}  
     nav{width: 600px; margin:0 auto}
     nav ul{display: flex; flex-direction: row; justify-content: space-around; margin: 0 auto; font-size: 18px; color: #fff;}
@@ -225,7 +405,7 @@
     /* series end */
 
     /* master start */
-    .master{width:1200px; height: 400px; margin: 0 auto; margin-top: 100px; margin-bottom: 100px; display: flex; justify-content: space-around; text-align: center; color: #fff; opacity: 0; margin-bottom: -300px; max-width:100%;}
+    .master{width:1200px; height: 400px; margin: 0 auto;  margin-bottom: 100px; display: flex; justify-content: space-around; text-align: center; color: #fff; opacity: 0; margin-bottom: -300px; max-width:100%;}
     .master img{width: 100%; height: 100%; }
     .master img:hover{transform: scale(1.2); transition:1s;}
     .master_1, .master_2, .master_3{width: 300px; height: 400px; float: left; margin-top: 50px;}
@@ -243,74 +423,74 @@
     
     /* gaga_box(+text) start */
     .gaga_box{width: 1000px; height: 850px; margin: 0 auto; display: flex; justify-content: space-around; flex-wrap: wrap; }
-    .gaga_box>div{width: 300px; height: 400px; float: left; margin: 0 auto; margin-top: 20px; background-size: cover; }
+    .gaga_box>div{width: 300px; height: 400px; float: left; margin: 0 auto; margin-top: 20px; background-size: 100% 100%; }
 
     /* graduation */
     .graduation{background: url(img/main/puzzle/gaga/graduation.jpg);}
-    .graduation_text{width: 100%; height: 100%; margin: 0 auto; opacity: 0;}
+    .graduation_text{width: 100%; height: 100%; margin: 0 auto; opacity: 0; padding:135px 0 0 0;}
     .graduation:hover .graduation_text{opacity: 0.63; background: #afcfdd; transition: 1.15s;}
 
     /* twokiller */
     .twokiller{background: url(img/main/puzzle/gaga/twokiller.jpg);}
     .twokiller p{font-size: 13.3px; font-weight: bold; }
-    .twokiller_text{width: 100%; height: 100%; margin: 0 auto; opacity: 0;}
+    .twokiller_text{width: 100%; height: 100%; margin: 0 auto; opacity: 0; padding:105px 0 0 0;}
     .twokiller:hover .twokiller_text{opacity: 0.63; background: #afcfdd; transition: 1.15s;}
     .twokiller:hover .twokiller_text{opacity: 0.63; background: #afcfdd; transition: 1.15s;}
 
     /* malice */
     .malice{background: url(img/main/puzzle/gaga/malice.jpg);}
-    .malice_text{width: 100%; height: 100%; margin: 0 auto; opacity: 0;}
+    .malice_text{width: 100%; height: 100%; margin: 0 auto; opacity: 0; padding:105px 0 0 0;}
     .malice:hover .malice_text{opacity: 0.63; background: #afcfdd; transition: 1.15s;}
 
     /* lie */
     .lie{background: url(img/main/puzzle/gaga/lie.jpg);}
-    .lie_text{width: 100%; height: 100%; margin: 0 auto; opacity: 0;}
+    .lie_text{width: 100%; height: 100%; margin: 0 auto; opacity: 0; padding:105px 0 0 0;} 
     .lie:hover .lie_text{opacity: 0.63; background: #afcfdd; transition: 1.15s;}
 
     /* kirin */
     .kirin{background: url(img/main/puzzle/gaga/kirin.jpg);}
-    .kirin_text{width: 100%; height: 100%; margin: 0 auto; opacity: 0;}
+    .kirin_text{width: 100%; height: 100%; margin: 0 auto; opacity: 0; padding:105px 0 0 0;}
     .kirin:hover .kirin_text{opacity: 0.63; background: #afcfdd; transition: 1.15s;}
       
     /* red_finger */
     .red_finger{background: url(img/main/puzzle/gaga/red_finger.jpg);}
-    .red_finger_text{width: 100%; height: 100%; margin: 0 auto; opacity: 0;}
+    .red_finger_text{width: 100%; height: 100%; margin: 0 auto; opacity: 0; padding:120px 0 0 0;}
     .red_finger:hover .red_finger_text{opacity: 0.63; background: #afcfdd; transition: 1.15s;}      
     /* gaga_box(+text) end */
 
     /* galileo_box(+text) start */
     .galileo_box{width: 1000px; height: 850px; margin: 0 auto; display: none; justify-content: space-around; flex-wrap: wrap;}
-    .galileo_box>div{width: 300px; height: 400px; float: left; margin: 0 auto; margin-top: 20px; background-size: cover;}
+    .galileo_box>div{width: 300px; height: 400px; float: left; margin: 0 auto; margin-top: 20px; background-size: 100% 100%;}
     
     /* detective */
     .detective{background: url(img/main/puzzle/galileo/detective.jpg);}
-    .detective_text{width: 100%; height: 100%; margin: 0 auto; opacity: 0;}
+    .detective_text{width: 100%; height: 100%; margin: 0 auto; opacity: 0; padding:130px 0 0 0;}
     .detective:hover .detective_text{opacity: 0.63; background: #afcfdd; transition: 1.15s;}
 
     /* prophetic */
     .prophetic{background: url(img/main/puzzle/galileo/prophetic.jpg);}
     .prophetic img{width: 100%; height: 100%;}
-    .prophetic_text{width: 100%; height: 100%; margin: 0 auto; opacity: 0;}
+    .prophetic_text{width: 100%; height: 100%; margin: 0 auto; opacity: 0; padding:105px 0 0 0;}
     .prophetic:hover .prophetic_text{opacity: 0.63; background: #afcfdd; transition: 1.15s;}
 
     /* suspect_x */
     .suspect_x{background: url(img/main/puzzle/galileo/suspect_x.jpg);}
-    .suspect_x_text{width: 100%; height: 100%; margin: 0 auto; opacity: 0;}
+    .suspect_x_text{width: 100%; height: 100%; margin: 0 auto; opacity: 0; padding:105px 0 0 0;}
     .suspect_x:hover .suspect_x_text{opacity: 0.63; background: #afcfdd; transition: 1.15s;}
 
     /* saint */
     .saint{background: url(img/main/puzzle/galileo/saint.jpg);}
-    .saint_text{width: 100%; height: 100%; margin: 0 auto; opacity: 0;}
+    .saint_text{width: 100%; height: 100%; margin: 0 auto; opacity: 0; padding:110px 0 0 0;}
     .saint:hover .saint_text{opacity: 0.63; background: #afcfdd; transition: 1.15s;}
 
     /* angulsh */
     .angulsh{background:url(img/main/puzzle/galileo/angulsh.jpg) ;}
-    .angulsh_text{width: 100%; height: 100%; margin: 0 auto; opacity: 0;}
+    .angulsh_text{width: 100%; height: 100%; margin: 0 auto; opacity: 0; padding:110px 0 0 0;}
     .angulsh:hover .angulsh_text{opacity: 0.63; background: #afcfdd; transition: 1.15s;}
 
     /* equations */
     .equations{background: url(img/main/puzzle/galileo/equation.jpg);}
-    .equations_text{width: 100%; height: 100%; margin: 0 auto; opacity: 0;}
+    .equations_text{width: 100%; height: 100%; margin: 0 auto; opacity: 0; padding:110px 0 0 0;}
     .equations:hover .equations_text{opacity: 0.63; background: #afcfdd; transition: 1.15s;}
     /* galileo_box(+text) end */
 
@@ -345,8 +525,9 @@
     .sub_button {width: 200px; height: 60px; background: #fff; color: #000; padding-top: 15px; margin: 0 auto;}
     .sub_button:hover{ background: #000; color: #fff; border:1px solid #fff; transition: 1.5s;}
     .etc_text_zone a:link, :visited, :active{color:#000;}
-    .after_school_text, .maskcabin_text, .mother_goose_text, .meteor_text, .date_text, .classmate_text{width: 100%; height: 100%; background-color: #fff; color:#000; opacity: 0;}
-    .after_school:hover .after_school_text, .maskcabin:hover .maskcabin_text, .mother_goose:hover .mother_goose_text, .meteor:hover .meteor_text, .date:hover .date_text, .classmate:hover .classmate_text {opacity: 0.63; transition: 1.15s;}
+    .after_school_text, .maskcabin_text, .mother_goose_text, .meteor_text, .date_text, .classmate_text{width: 100%; height: 100%; background-color: #000; opacity: 0;}
+    .after_school:hover .after_school_text, .maskcabin:hover .maskcabin_text, .mother_goose:hover .mother_goose_text, .meteor:hover .meteor_text, .date:hover .date_text, .classmate:hover .classmate_text {opacity: 0.43; transition: 1.15s;}
+    .text_button{width: 150px; height: 50px; background: #fff; text-align: center; padding: 15px 0 0 0; margin: 0 auto; position: relative; top:40% ; cursor: pointer;}
     .after_school{background: url(img/main/etc/after_school.jpg);}
     .maskcabin{background: url(img/main/etc/maskcabin.jpg);}
     .mother_goose{background: url(img/main/etc/mother_goose.jpg);}
@@ -401,8 +582,8 @@
         $(".series").each( function(i){
           let boe=$(this).offset().top+$(this).outerHeight();
           let bow=$(window).scrollTop()+$(window).height();
-          if( bow > boe ){
-            $(this).animate({'opacity':'1','margin-bottom':'0px'},500);
+          if( bow > boe/1.5){
+            $(this).animate({'opacity':'1','margin-bottom':'0px'},1800);
           }
         });
       });
@@ -411,8 +592,8 @@
         $(".master").each( function(i){
           let boe=$(this).offset().top+$(this).outerHeight();
           let bow=$(window).scrollTop()+$(window).height();
-          if( bow > boe ){
-            $(this).animate({'opacity':'1','margin-bottom':'100px'},500);
+          if( bow > boe /1.05){
+            $(this).animate({'opacity':'1','margin-bottom':'100px'},1800);
           }
         });
       });
@@ -421,8 +602,8 @@
         $(".puzzle").each( function(i){
           let boe=$(this).offset().top+$(this).outerHeight();
           let bow=$(window).scrollTop()+$(window).height();
-          if( bow > boe ){
-            $(this).animate({'opacity':'1','margin-bottom':'0px'},200);
+          if( bow > boe /1.2){
+            $(this).animate({'opacity':'1','margin-bottom':'0px'},1800);
           }
         });
       });
@@ -431,8 +612,8 @@
         $(".etc").each( function(i){
           let boe=$(this).offset().top+$(this).outerHeight();
           let bow=$(window).scrollTop()+$(window).height();
-          if( bow > boe ){
-            $(this).animate({'opacity':'1','margin-bottom':'200px'},500);
+          if( bow > boe /1.2){
+            $(this).animate({'opacity':'1','margin-bottom':'0px'},1800);
           }
         });
       });
@@ -522,7 +703,7 @@
           <div class="gaga_box">
 
               <div class="graduation">
-                <div class="graduation_text"><br><br><br><br><br><br><br><br>
+                <div class="graduation_text">
                   <p>히가시노 게이고 작가의 시작을 알리며<br>
                   나타난 가가 형사 시리즈의 첫 번째 작품 !</p> <br><br>
                   대학 졸업을 앞둔 6명의 친구들 사이에서<br>
@@ -531,7 +712,7 @@
               </div>
 
               <div class="twokiller">
-                <div class="twokiller_text"><br><br><br><br><br><br><br><br>
+                <div class="twokiller_text">
                   <p>히가시노 게이고 작가가 독자들에게 건넨 도전장!<br> 당신은 과연 진실에 도달 할 수 있을 것인가 !</p><br><br>
                   '내가 죽으면 아마 가장 좋을거 같아.<br>
                   둘 중 누군가 나를 죽여준다면 좋을텐데..'<br>
@@ -543,7 +724,7 @@
               </div>
 
               <div class="malice">
-                <div class="malice_text"><br><br><br><br><br><br><br><br>
+                <div class="malice_text">
                   <p>평범한 추리소설의 틀을 깨부순 소설! <br> 전지적 작가시점으로 벌어지는 사건들. <br>과연 당신은 진실을 알아 볼 수 있겠는가?</p><br><br>
                   당신은 추리 소설을 볼 때 <br>
                   무엇을 제일 중심에 두시나요?<br>
@@ -554,7 +735,7 @@
               </div>
 
               <div class="lie">
-                <div class="lie_text"><br><br><br><br><br><br><br><br>
+                <div class="lie_text">
                   <p>가가 형사 시리즈의 여섯 번째 이야기. <br> 가가 교이치로라는 인물에 대해 다가갈 수 있는<br> 히가시노 게이고의 단편집.</p><br><br>
                   가가 형사 시리즈의 유일한 단편집<br>
                   인간의 추악한 면모를 밝혀내가면서도<br>
@@ -565,7 +746,7 @@
               </div>
 
               <div class="kirin">
-                <div class="kirin_text"><br><br><br><br><br><br><br><br>
+                <div class="kirin_text">
                   <p>“용기를 내라, 진실로부터 도망치지 마라,<br> 자신이 믿는 대로 하라.”</p><br><br>
                   '늦은 밤, 멀리서 누군가 다가온다.<br>
                   칼에 찔린 채 스스로 기린 조각상 앞에<br>
@@ -578,7 +759,7 @@
               </div>
 
               <div class="red_finger">
-                <div class="red_finger_text"><br><br><br><br><br><br><br><br>
+                <div class="red_finger_text">
                   <p>이보다 더 슬픈 추리소설은 없었다!<br>반전의 쾌감, 반전의 서글픔,<br>반전의 감동이 어우러진 역작</p><br><br>
                   우리 옆 평범한 한 집안이 키워낸 텅 빈 눈의 괴물<br>
                   가정이라는 ‘밀실’과 가족애라는 ‘굴레’, 그 어두운 초상<br>
@@ -592,7 +773,7 @@
           <div class="galileo_box">
 
               <div class="detective">
-                <div class="detective_text"><br><br><br><br><br><br><br><br>
+                <div class="detective_text">
                   <p>천재 물리학자가 신비한 초자연 현상의<br>수수께끼에 도전한다!<br></p><br><br>
                   천재 물리학자 유가와 마나부,<br>
                   베테랑 형사 구사나기<br>
@@ -601,7 +782,7 @@
               </div>
 
               <div class="prophetic">
-                <div class="prophetic_text"><br><br><br><br><br><br><br><br>
+                <div class="prophetic_text">
                   <p>천재 물리학자 유가와 마나부.<br>이번엔 폴터가이스트에 도전한다 !</p><br><br>
                   '저 어제 이 장면 꿈에서 봤어요.'<br><br>
                   '자네는 엑소시즘이라도 받아야하는거 아닌가?<br>
@@ -612,7 +793,7 @@
               </div>
 
               <div class="suspect_x">
-                <div class="suspect_x_text"><br><br><br><br><br><br><br><br>
+                <div class="suspect_x_text">
                   <p>백 퍼센트의 사랑,<br> 백 퍼센트의 헌신<br>추리 소설 역사상 가장 처절하고<br>가장 아름다운 한 편의 서사시</p><br><br>
                   히가시노 게이고 작가의 대표작<br>
                   '<b>용의자 X의 헌신</b>'<br>
@@ -622,7 +803,7 @@
               </div>
 
               <div class="saint">
-                <div class="saint_text"><br><br><br><br><br><br><br><br>
+                <div class="saint_text">
                   <p>왜곡된 사랑이 부른 슬픈 복수극</p><br><br>
                   구제와 단죄,<br>
                   그 사이에 놓인 진실은 무엇인가?<br>
@@ -633,7 +814,7 @@
               </div>
 
               <div class="angulsh">
-                <div class="angulsh_text"><br><br><br><br><br><br><br><br>
+                <div class="angulsh_text">
                   <p>'악마의 손'이 탐정 갈릴레오에게 건넨 도전장.</p><br><br>
                   여러 미스테리를 해결 해 온<br>
                   탐정 갈릴레오, 유가와 마나부에게<br>
@@ -644,7 +825,7 @@
               </div>
 
               <div class="equations">
-                <div class="equations_text"><br><br><br><br><br><br><br><br>
+                <div class="equations_text">
                   <p>'이것은 사고인가,살인인가. <br> 사람들 사이에 존재하는<br>유대감을 다시금 깨닫게 하는 이야기.</p><br><br>
                   업무 상 지방에 내려간 유가와 교수를<br>
                   맞이한 의미심장한 여관의 사건<br>
@@ -708,103 +889,49 @@
 
       <div class="after_school">
         <div class="after_school_text">
-          <br><br><br><br>
-          세이카 여고의 수학교사 마에시마.<br>
-          평범한 하루하루를 보내던 그는 목숨을 노린 공격을 세 차례나 받는다.<br>
-          그 와중 탈의실에서 교사가 청산가리로 살해되는 사건이 벌어진다.<br>
-          첫 번째 살인 사건이 밝혀지기도 전에 체육 교사 다케이가<br>
-          학교 축제에서 피에로 역할을 하다가 청산가리로 살해된다.<br>
-          두 차례의 살인사건의 진짜 목표은 자신일지도 모른다는 생각 속에<br>
-          마에시마는 범인을 찾아 나서게된다.
+          <div class="text_button">
+            자세히 보기
+          </div>
         </div>
       </div>
 
       <div class="maskcabin">
         <div class="maskcabin_text">
-          <br><br><br>
-          아버지 소유의 별장 근처 작은 교회에서<br
-          >결혼식을 올리는 것이 꿈이었던 도모미<br>
-          그 꿈이 이루어질 날을<br>
-          불과 일주일 앞두고 운전 부주의로 인해<br>
-          가드레일을 들이받고 절벽에서 추락해 사망한다.<br>
-          얼마 후, 그녀의 약혼자였던 다카유키는<br>
-          도모미의 아버지로부터<br>
-          별장에 와서 묵으라는 초대를 받는다.<br>
-          다카유키가 별장에 도착한 날 밤,<br>
-          경찰에 쫓기던 2인조 은행 강도가<br>
-          별장에 침입해<br>
-          그곳에 모여 있던 8명을<br>
-          감금하고 인질극을 벌인다.
+          <div class="text_button">
+            자세히 보기
+          </div>
         </div>
       </div>
 
       <div class="mother_goose">
         <div class="mother_goose_text">
-          <br><br><br>
-          여대생 하라 나오코는<br>1년 전 자살한 오빠 고이치의 죽음에<br>
-          의문을 품고 친구 사와무라 마코토와<br>
-          함께 진상을 쫓는다.<br>
-          오빠가 사망한 곳은<br>
-          영국인 여성의 집을<br>
-          펜션으로 꾸민 ‘머더구스’.<br>
-          나오코가 찾아간 머더구스는<br>
-          7개의 객실이 있고<br>
-          각 방마다 영국의<br>
-          구전 동요가 쓰여 있다.<br>
-          혹시 이게 암호이고,<br>
-          이걸 풀면 오빠 죽음의<br>
-          비밀에 다가갈 수 있지 않을까?
+          <div class="text_button">
+            자세히 보기
+          </div>
         </div>
       </div>
 
       <div class="meteor">
         <div class="meteor_text">
-          <br><br><br><br>
-          주인공인 아리아케 3남매는<br>
-          15년전 어린시절,<br>
-          유성을 보기 위해<br>
-          몰래 집을 빠져나온다.<br>
-          하지만 흐린 날씨 때문에<br>
-          유성을 보지는 못했고,<br>
-          실망해서 집에 돌아와 보니<br>
-          부모님이 살해당한 상태였다.<br>
-          사건현장엔 다수의 증거가 있었지만,<br>
-          결국 범인을 체포하는데 실패하고,<br>
-          삼남매는 커서 범인을 붙잡아<br>
-          복수하자고 다짐한다.
+          <div class="text_button">
+            자세히 보기
+          </div>
         </div>
       </div>
 
       <div class="date">
         <div class="date_text">
-          <br><br><br><br><br>
-          ‘겔렌데 마법’이라는 것이 있다.<br>
-          스키장에서는 사랑에 빠지기<br>
-          쉽다는 법칙이다.<br>
-          설원의 분위기가 단점은 가려주고<br>
-          장점은 부각시켜주기 때문에<br>
-          생기는 현상이라고 한다.<br>
-          그래서인지 스키장에서는<br>
-          사람들이 자꾸 사랑에 빠진다.
+          <div class="text_button">
+            자세히 보기
+          </div>
         </div>
       </div>
 
       <div class="classmate">
         <div class="classmate_text">
-          <br><br><br>
-          시니컬하기로 유명한<br>
-          슈분칸고교 야구부 주장<br>
-          니시하라는 어느날,<br>
-          자신에게 오롯한 사랑을 주었던<br>
-          유키코가 자신의 아이를 임신한채<br>
-          교통사고로 죽었다는 소식을 접한다.<br>
-          사랑하는 여자에게 씻을수없는 짐을<br>
-          떠안긴것도 모자라<br>
-          죽음으로 내몰았다는<br>
-          죄책감이 폭발한 니시하라는 뜻이<br>
-          같은 미남투수 가와이와<br>
-          교내 대표퀸카 가오루와 함께<br>
-          사건의 진상을 파헤쳐 나가게 된다.
+          <div class="text_button">
+            자세히 보기
+          </div>
         </div>
       </div>
 
