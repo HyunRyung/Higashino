@@ -1,0 +1,61 @@
+
+
+
+@media (max-width:599px){
+  /* header start */
+  header{width: 100%; height: 100px; margin: 0 auto; text-align: center; background: transparent; background: #212121;}  
+  nav{width: 100%; margin:0 auto}
+  nav ul{display: flex; flex-direction: row; justify-content: space-around; margin: 0 auto; font-size: 18px; color: #fff;}
+  nav ul li{ float: left; margin: 0 auto; padding: 38px 0;}
+  nav ul li a:link{color:#fff;}
+  nav ul li a:visited{color:#fff;}
+  /* header end */
+
+  /* footer start */
+  footer{width: 100%; height: 200px; color:#fff; text-align: center; margin: 0 auto; margin-top: 120px; }
+  footer p{font-size: 28px; font-weight: bold;}
+  .ft_nav{width: 100%; height: 100%; margin: 0 auto; text-align: center; border-top: 1px solid #444;}
+  .ft_nav ul{width: 100%; height: 20px; margin: 0 auto;}
+  .ft_nav ul li{width: 33.3%; height: 20px; margin: 0 auto; float:left;}
+  /* footer end */
+}
+
+
+@media(min-width:600px) and (max-width:1199px){
+    /* header start */
+  header{width: 100%; height: 100px; margin: 0 auto; text-align: center; background: transparent; background: #212121;}  
+  nav{width: 600px; margin:0 auto}
+  nav ul{display: flex; flex-direction: row; justify-content: space-around; margin: 0 auto; font-size: 18px; color: #fff;}
+  nav ul li{ float: left; margin: 0 auto; padding: 38px 0;}
+  nav ul li a:link{color:#fff;}
+  nav ul li a:visited{color:#fff;}
+  /* header end */
+
+  /* footer start */
+  footer{width: 100%; height: 200px; color:#fff; text-align: center; margin: 0 auto;margin-top: 200px; }
+  footer p{font-size: 28px; font-weight: bold;}
+  .ft_nav{width: 100%; height: 100%; margin: 0 auto; text-align: center; border-top: 1px solid #444;}
+  .ft_nav ul{width: 100%; height: 20px; margin: 0 auto;}
+  .ft_nav ul li{width: 33.3%; height: 20px; margin: 0 auto; float:left;}
+  /* footer end */
+}
+
+@media (min-width:1200px){
+  /* header start */
+  header{width: 100%; height: 100px; margin: 0 auto; text-align: center; background: transparent; background: #212121;}  
+  nav{width: 600px; margin:0 auto}
+  nav ul{display: flex; flex-direction: row; justify-content: space-around; margin: 0 auto; font-size: 18px; color: #fff;}
+  nav ul li{ float: left; margin: 0 auto; padding: 38px 0;}
+  nav ul li a:link{color:#fff;}
+  nav ul li a:visited{color:#fff;}
+  /* header end */
+
+  /* footer start */
+  footer{width: 100%; height: 200px; color:#fff; text-align: center; margin: 0 auto;margin-top: 200px; }
+  footer p{font-size: 28px; font-weight: bold;}
+  .ft_nav{width: 1200px; height: 100%; margin: 0 auto; text-align: center; border-top: 1px solid #444;}
+  .ft_nav ul{width: 100%; height: 20px; margin: 0 auto;}
+  .ft_nav ul li{width: 33.3%; height: 20px; margin: 0 auto; float:left;}
+  /* footer end */
+}
+  
