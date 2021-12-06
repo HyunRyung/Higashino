@@ -1,25 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Higashino</title>
-    <link rel="stylesheet" href="css/reset_css.css" type="text/css">
-    <link rel="stylesheet" href="css/common_css.css" type="text/css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Higashino</title>
+  <link rel="stylesheet" href="css/reset_css.css" type="text/css">
+  <link rel="stylesheet" href="css/common_css.css" type="text/css">
+
+  <style>
+    body{background: #21212a;}
+
+    /* intro start */
+    .intro_cover{width: 100%; height: 1800px;}
+    .intro{width: 1200px; height: 1600px; margin: 0 auto; padding-top: 100px;}
+    .intro_img{width: 400px; height: 800px; margin: 0 auto;}
+    .intro img{width:100%; height: 100%;}
+    .intro_text{width: 400px; height: 200px; margin: 0 auto; margin-top: 50px; background-color: #fff; border-radius: 10px; box-shadow: 3px 3px 3px #eee;} 
+    /* intro end */
+
+    /* series_line start */
+    .series_line{width: 100%; height: 150px; font-family:"HYcysM"; font-size:32px; padding-top: 10px; text-align: center; color:#eee;}
+    /* series_line end */
+
+    /* first start */
+    .first_cover{width: 100%; height: 1200px;}
+    .first_piece{width: 1200px; height: 100%; margin:0 auto;}
+    .first_slide{width: 400px; height: 600px; margin:0 auto; overflow: hidden;}
+    .first_slide ul{width: 400px; margin: 0 auto;}
+    .first_slide li{width: 400px; height: 600px; margin:0 auto; }
+    .first_slide li img {width:400px; height: 600px;}
+    .first_piece span {position: relative; display: block; font-size: 64px; font-weight: bold; color:#fff; line-height: 40px; cursor: pointer; width: 40px; height: 50px; }
+    .prev {left:250px; bottom:30.88%;}
+    .next {left:900px; bottom: 35%;}
+
+  </style>
+
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.js"></script>
+  <script>
+    $(function(){
+      $('.prev').click(function(){
+        $('.first_slide li:last').prependTo('.first_slide');
+        $('.first_slide').animate({marginLeft:"400px"});
+        $('.first_slide').stop().animate({marginLeft:"400px"});
+        });
+
+        $('.next').click(function(){
+          $('.first_slide').stop().animate({marginLeft:"400px"}, function(){
+            $('.first_slide li:first').appendTo('.first_slide');
+            $('.first_slide').css({marginLeft:"400px"});
+          });
+        });
+      });
+
+  </script>
+
 </head>
-<body>
-
-    <header>
+  <header>
         <nav>
-            <ul>
-                <li><a href="index.html">MAIN</a></li>
-                <li><a href="Higashino_SUB.html">DESCRIPTION</a></li>
-                <li><a href="#">DETAIL</a></li>
-            </ul>
-        </nav>
-    </header>
+          <ul>
+              <li><a href="index.html">MAIN</a></li>
+              <li><a href="Higashino_SUB.html">DESCRIPTION</a></li>
+              <li><a href="#">DETAIL</a></li>
+          </ul>
+      </nav>
+  </header>
 
-    <div class="book_img"></div>
+  <div class="intro_cover">
+    <div class="intro">
+      <div class="intro_img"><img src="img/sub/intro/higashino_geigo.jpg" alt=""></div>
+      <div class="intro_text"></div>
+      <div class="intro_text"></div>
+      <div class="intro_text"></div>
+    </div>
+  </div>
+
+  <div class="series_line">
+
+    히가시노 게이고가 제일 사랑하는 캐릭터 <br><br>
+    ' 가가 형사 시리즈 '
+
+  </div>
+
+  <div class="first_cover">
+
+    <div class="first_piece">
+
+      <div class="first_slide">
+        <ul>
+          <li class="slide1"><img src="img/main/puzzle/gaga/graduation.jpg" alt="graduation"></li>
+          <li class="slide2"><img src="img/main/puzzle/gaga/twokiller.jpg" alt="twokiller"></li>
+          <li class="slide3"><img src="img/main/puzzle/gaga/malice.jpg" alt="malice"></li>
+          <li class="slide4"><img src="img/main/puzzle/gaga/lie.jpg" alt="lie"></li>
+          <li class="slide5"><img src="img/main/puzzle/gaga/kirin.jpg" alt="kirin"></li>
+          <li class="slide6"><img src="img/main/puzzle/gaga/red_finger.jpg" alt="red_finger"></li>
+        </ul>
+      </div>
+
+      <span class="prev">&lt;</span>
+      <span class="next">&gt;</span>
+        
+    </div>
+
+  </div>
+
+
+  <div class="second_cover">
+
+    <div class="second_piece">
+
+      <img src="" alt="">
+      <div class="second_text">
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="third_cover">
+
+    <div class="third_piece">
+
+      <img src="" alt="">
+      <div class="third_text">
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="fourth_cover">
+
+    <div class="fourth_piece">
+
+      <img src="" alt="">
+      <div class="fourth_text">
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="fifth_cover">
+
+    <div class="fifth_piece">
+
+      <img src="" alt="">
+      <div class="fifth_text">
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="sixth_cover">
+
+    <div class="sixth_piece">
+
+      <img src="" alt="">
+      <div class="sixth_text">
+
+      </div>
+
+    </div>
+
+  </div>
+
+<div class="outro_cover">
+
+  <div class="outro">
+    
+  </div>
+
+</div>
+
 </body>
 </html>
