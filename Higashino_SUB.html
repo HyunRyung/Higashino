@@ -24,28 +24,41 @@
     /* series_line end */
 
     /* first start */
-    .first_cover{width: 100%; height: 1200px;}
+    .first_cover{width: 100%; height: 950px;}
     .first_piece{width: 1200px; height: 100%; margin:0 auto;}
     .first_slide{width: 400px; height: 600px; margin:0 auto; overflow: hidden;}
     .first_slide ul{width: 400px; margin: 0 auto;}
     .first_slide li{width: 400px; height: 600px; margin:0 auto; }
     .first_slide li img {width:400px; height: 600px;}
     .first_piece span {position: relative; display: block; font-size: 64px; font-weight: bold; color:#fff; line-height: 40px; cursor: pointer; width: 40px; height: 50px; }
-    .prev {left:250px; bottom:30.88%;}
-    .next {left:900px; bottom: 35%;}
+    .first_prev {left:250px; bottom:30.88%;}
+    .first_next {left:900px; bottom: 35%;}
+    .first_text{width:300px; height: 200px; float: left; border-radius: 10px; background-color: #fff; margin: 0 auto; margin-left: 50px; margin-right: 50px; text-align: center; padding:50px 0 0 0; font-size: 36px;}
+    /* first end */
+
+    /* second start */
+    .second_cover{width: 100%; height: 950px;}
+    .second_piece{width: 1200px; height: 100%; margin:0 auto;}
+    .second_slide{width: 400px; height: 600px; margin:0 auto; overflow: hidden;}
+    .second_slide ul{width: 400px; margin: 0 auto;}
+    .second_slide li{width: 400px; height: 600px; margin:0 auto; }
+    .second_slide li img {width:400px; height: 600px;}
+    .second_piece span {position: relative; display: block; font-size: 64px; font-weight: bold; color:#fff; line-height: 40px; cursor: pointer; width: 40px; height: 50px; }
+    .second_prev {left:250px; bottom:30.88%;}
+    .second_next {left:900px; bottom: 35%;}
 
   </style>
 
   <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.js"></script>
   <script>
     $(function(){
-      $('.prev').click(function(){
+      $('.first_prev').click(function(){
         $('.first_slide li:last').prependTo('.first_slide');
         $('.first_slide').animate({marginLeft:"400px"});
         $('.first_slide').stop().animate({marginLeft:"400px"});
         });
 
-        $('.next').click(function(){
+        $('.first_next').click(function(){
           $('.first_slide').stop().animate({marginLeft:"400px"}, function(){
             $('.first_slide li:first').appendTo('.first_slide');
             $('.first_slide').css({marginLeft:"400px"});
@@ -69,9 +82,9 @@
   <div class="intro_cover">
     <div class="intro">
       <div class="intro_img"><img src="img/sub/intro/higashino_geigo.jpg" alt=""></div>
-      <div class="intro_text"></div>
-      <div class="intro_text"></div>
-      <div class="intro_text"></div>
+      <div class="intro_text">text</div>
+      <div class="intro_text">text</div>
+      <div class="intro_text">text</div>
     </div>
   </div>
 
@@ -84,6 +97,7 @@
 
   <div class="first_cover">
 
+    <!-- 메인 이미지 + 슬라이드 -->
     <div class="first_piece">
 
       <div class="first_slide">
@@ -97,8 +111,11 @@
         </ul>
       </div>
 
-      <span class="prev">&lt;</span>
-      <span class="next">&gt;</span>
+      <span class="first_prev">&lt;</span>
+      <span class="first_next">&gt;</span>
+      <div class="first_text">text <br> text</div>
+      <div class="first_text">text <br> text</div>
+      <div class="first_text">text <br> text</div>
         
     </div>
 
@@ -108,11 +125,21 @@
   <div class="second_cover">
 
     <div class="second_piece">
-
-      <img src="" alt="">
-      <div class="second_text">
-
+      <div class="second_slide">
+        <ul>
+          <li class="slide1"><img src="img/main/puzzle/galileo/detective.jpg" alt="galileo"></li>
+          <li class="slide2"><img src="img/main/puzzle/galileo/prophetic.jpg" alt="prophetic"></li>
+          <li class="slide3"><img src="img/main/puzzle/galileo/suspect_x.jpg" alt=""></li>
+          <li class="slide4"><img src="img/main/puzzle/galileo/saint.jpg" alt="saint"></li>
+          <li class="slide5"><img src="img/main/puzzle/galileo/angulsh.jpg" alt="angulsh"></li>
+          <li class="slide6"><img src="img/main/puzzle/galileo/equation.jpg" alt="equation"></li>
+        </ul>
       </div>
+    <span class="second_prev">&lt;</span>
+    <span class="second_next">&gt;</span>
+    <div class="first_text">text <br> text</div>
+    <div class="first_text">text <br> text</div>
+    <div class="first_text">text <br> text</div>
 
     </div>
 
