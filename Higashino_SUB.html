@@ -1,209 +1,128 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Higashino</title>
+  <title>Document</title>
   <link rel="stylesheet" href="css/reset_css.css" type="text/css">
   <link rel="stylesheet" href="css/common_css.css" type="text/css">
-
   <style>
-    body{background: #21212a;}
+    body{background-color: #212121;}
 
-    /* intro start */
-    .intro_cover{width: 100%; height: 1800px;}
-    .intro{width: 1200px; height: 1600px; margin: 0 auto; padding-top: 100px;}
-    .intro_img{width: 400px; height: 800px; margin: 0 auto;}
-    .intro img{width:100%; height: 100%;}
-    .intro_text{width: 400px; height: 200px; margin: 0 auto; margin-top: 50px; background-color: #fff; border-radius: 10px; box-shadow: 3px 3px 3px #eee;} 
-    /* intro end */
-
-    /* series_line start */
-    .series_line{width: 100%; height: 150px; font-family:"HYcysM"; font-size:32px; padding-top: 10px; text-align: center; color:#eee;}
-    /* series_line end */
-
-    /* first start */
-    .first_cover{width: 100%; height: 950px;}
-    .first_piece{width: 1200px; height: 100%; margin:0 auto;}
-    .first_slide{width: 400px; height: 600px; margin:0 auto; overflow: hidden;}
-    .first_slide ul{width: 400px; margin: 0 auto;}
-    .first_slide li{width: 400px; height: 600px; margin:0 auto; }
-    .first_slide li img {width:400px; height: 600px;}
-    .first_piece span {position: relative; display: block; font-size: 64px; font-weight: bold; color:#fff; line-height: 40px; cursor: pointer; width: 40px; height: 50px; }
-    .first_prev {left:250px; bottom:30.88%;}
-    .first_next {left:900px; bottom: 35%;}
-    .first_text{width:300px; height: 200px; float: left; border-radius: 10px; background-color: #fff; margin: 0 auto; margin-left: 50px; margin-right: 50px; text-align: center; padding:50px 0 0 0; font-size: 36px;}
-    /* first end */
-
-    /* second start */
-    .second_cover{width: 100%; height: 950px;}
-    .second_piece{width: 1200px; height: 100%; margin:0 auto;}
-    .second_slide{width: 400px; height: 600px; margin:0 auto; overflow: hidden;}
-    .second_slide ul{width: 400px; margin: 0 auto;}
-    .second_slide li{width: 400px; height: 600px; margin:0 auto; }
-    .second_slide li img {width:400px; height: 600px;}
-    .second_piece span {position: relative; display: block; font-size: 64px; font-weight: bold; color:#fff; line-height: 40px; cursor: pointer; width: 40px; height: 50px; }
-    .second_prev {left:250px; bottom:30.88%;}
-    .second_next {left:900px; bottom: 35%;}
+    /* intro */
+    .intro{width: 100%; height: 850px;}
+    .intro img{width: 100%; height: 100%;}
+    .text_zone{width: 100%; height: 200px; margin: 0 auto; font-family: "Haan Cooljazz M"; text-align: center; margin-bottom: 100px;}
+    .text_box{width: 500px; height: 100%; margin: 0 auto; color: #fff; font-size: 24px; } 
+    .text_box span{font-weight: bold; color:#fff; font-size: 28px;}
+    .text_box p{font-weight: bold; color:#fff;}
+    /* main */
+    .main_prv{width:100%; height: 950px; margin: 0 auto; text-align: center; cursor: pointer; background:#000;}
+    .main_prv_text{width:100%; height:100%; display:flex; justify-content: center; align-items:center; font-size: 50px; color:#fff; opacity: 0; }
+    .main{width:100%; height:950px; display: none; background:url(img/sub/story_book/back_img.jpg); background-size:100% 100%; background-repeat:no-repeat; opacity: 0;}
+    .main_book{width: 800px; height: 600px; opacity:0; margin:0 auto; background:url(img/sub/story_book/book_img.jpg); background-size: 100% 100%; background-repeat: no-repeat; display:flex; justify-content:center; align-items:center;}
+    .main_text{width:50%; height:100%;opacity:0;  margin:0 auto; font-size: 22px;  font-family: "Haan Cooljazz M"; color: #000; float:left; display:flex; justify-content:center; align-items:center; text-align: center;}
+    .blank{width: 50%; height: 100%; opacity: 0; display:flex; justify-content:center; align-items:center;}
+    .arrow{width: 0; height: 0; border-top: 20px solid transparent; border-bottom: 20px solid transparent; border-left: 20px solid black; cursor: pointer;}
 
   </style>
 
-  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.js"></script>
-  <script>
-    $(function(){
-      $('.first_prev').click(function(){
-        $('.first_slide li:last').prependTo('.first_slide');
-        $('.first_slide').animate({marginLeft:"400px"});
-        $('.first_slide').stop().animate({marginLeft:"400px"});
-        });
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.js"></script>
+<script>
 
-        $('.first_next').click(function(){
-          $('.first_slide').stop().animate({marginLeft:"400px"}, function(){
-            $('.first_slide li:first').appendTo('.first_slide');
-            $('.first_slide').css({marginLeft:"400px"});
-          });
+$(window).scroll(function(){
+ $(".main_prv").mouseenter(function(){
+      $(".main_prv_text").animate({"opacity":"1","transition":"2s"});
+      });
+    });
+
+    
+
+$(function(){
+  $(".main_prv").click(function(){
+    $(".main_prv").css("display","none");
+    $(".main").css({"display":"flex","justify-content":"center","align-items":"center"}).animate({"opacity":"1","transition":"3s"},
+    function(){
+      $(".main_book").animate({"opacity":"1","transition":"5s"},
+      function(){
+        $(".main_text").animate({"opacity":"1","trasition":"5s"},
+        function(){
+          $(".blank").animate({"opacity":"1"});
         });
       });
+    }); 
+  });
+});
 
-  </script>
 
+
+</script>
 </head>
-  <header>
-        <nav>
-          <ul>
-              <li><a href="index.html">MAIN</a></li>
-              <li><a href="Higashino_SUB.html">DESCRIPTION</a></li>
-              <li><a href="#">DETAIL</a></li>
-          </ul>
-      </nav>
-  </header>
+<body>
 
-  <div class="intro_cover">
-    <div class="intro">
-      <div class="intro_img"><img src="img/sub/intro/higashino_geigo.jpg" alt=""></div>
-      <div class="intro_text">text</div>
-      <div class="intro_text">text</div>
-      <div class="intro_text">text</div>
-    </div>
-  </div>
+ 
+<header>
+  <nav>
+    <ul>
+      <li><a href="index.html">MAIN</a></li>
+      <li><a href="Higashino_SUB.html">DESCRIPTION</a></li>
+      <li><a href="#">DETAIL</a></li>
+    </ul>
+  </nav>
+</header> 
 
-  <div class="series_line">
-
-    히가시노 게이고가 제일 사랑하는 캐릭터 <br><br>
-    ' 가가 형사 시리즈 '
-
-  </div>
-
-  <div class="first_cover">
-
-    <!-- 메인 이미지 + 슬라이드 -->
-    <div class="first_piece">
-
-      <div class="first_slide">
-        <ul>
-          <li class="slide1"><img src="img/main/puzzle/gaga/graduation.jpg" alt="graduation"></li>
-          <li class="slide2"><img src="img/main/puzzle/gaga/twokiller.jpg" alt="twokiller"></li>
-          <li class="slide3"><img src="img/main/puzzle/gaga/malice.jpg" alt="malice"></li>
-          <li class="slide4"><img src="img/main/puzzle/gaga/lie.jpg" alt="lie"></li>
-          <li class="slide5"><img src="img/main/puzzle/gaga/kirin.jpg" alt="kirin"></li>
-          <li class="slide6"><img src="img/main/puzzle/gaga/red_finger.jpg" alt="red_finger"></li>
-        </ul>
-      </div>
-
-      <span class="first_prev">&lt;</span>
-      <span class="first_next">&gt;</span>
-      <div class="first_text">text <br> text</div>
-      <div class="first_text">text <br> text</div>
-      <div class="first_text">text <br> text</div>
-        
-    </div>
-
-  </div>
+  
+<div class="intro">
+  <img src="img/sub/intro/tree.jpg" alt="intro_img">
+</div>
 
 
-  <div class="second_cover">
+<div class="text_zone">
 
-    <div class="second_piece">
-      <div class="second_slide">
-        <ul>
-          <li class="slide1"><img src="img/main/puzzle/galileo/detective.jpg" alt="galileo"></li>
-          <li class="slide2"><img src="img/main/puzzle/galileo/prophetic.jpg" alt="prophetic"></li>
-          <li class="slide3"><img src="img/main/puzzle/galileo/suspect_x.jpg" alt=""></li>
-          <li class="slide4"><img src="img/main/puzzle/galileo/saint.jpg" alt="saint"></li>
-          <li class="slide5"><img src="img/main/puzzle/galileo/angulsh.jpg" alt="angulsh"></li>
-          <li class="slide6"><img src="img/main/puzzle/galileo/equation.jpg" alt="equation"></li>
-        </ul>
-      </div>
-    <span class="second_prev">&lt;</span>
-    <span class="second_next">&gt;</span>
-    <div class="first_text">text <br> text</div>
-    <div class="first_text">text <br> text</div>
-    <div class="first_text">text <br> text</div>
-
-    </div>
-
-  </div>
-
-  <div class="third_cover">
-
-    <div class="third_piece">
-
-      <img src="" alt="">
-      <div class="third_text">
-
-      </div>
-
-    </div>
-
-  </div>
-
-  <div class="fourth_cover">
-
-    <div class="fourth_piece">
-
-      <img src="" alt="">
-      <div class="fourth_text">
-
-      </div>
-
-    </div>
-
-  </div>
-
-  <div class="fifth_cover">
-
-    <div class="fifth_piece">
-
-      <img src="" alt="">
-      <div class="fifth_text">
-
-      </div>
-
-    </div>
-
-  </div>
-
-  <div class="sixth_cover">
-
-    <div class="sixth_piece">
-
-      <img src="" alt="">
-      <div class="sixth_text">
-
-      </div>
-
-    </div>
-
-  </div>
-
-<div class="outro_cover">
-
-  <div class="outro">
-    
+  <div class="text_box">
+    <span>"</span>  
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;   
+    <span>"</span>  <br>
+    소원을 100% 들어주는<br>
+    신비한 나무의 이야기입니다. <br>
+    옆 사람과 서로 마음을 열고 만나기를 <br>
+    빌어보는 것도 가능합니다. <br>
+    &nbsp;&nbsp; <p> - 작가 히가시노 게이고 </p>
   </div>
 
 </div>
 
+<div class="main_prv">
+
+  <div class="main_prv_text">
+    text
+  </div>
+</div>
+
+<div class="main">
+
+  <div class = "main_book">
+
+    <div class = "main_text">
+      “결함 있는 기계는<br><br>
+      아무리 수리해도 또 고장이 난다. <br><br>
+      그 녀석도 마찬가지로 결함품이다… <br><br>
+      앞으로 살아가면서<br><br>
+      그 말이 잘못되었다는 것을 증명하도록 해.“
+    </div>
+
+    <div class="blank">
+      <div class="arrow"></div>
+      <div class="arrow"></div>
+    </div> 
+  </div>
+  
+</div>
+
+
+
+  
 </body>
+
 </html>
