@@ -23,9 +23,35 @@
     .main{width:100%; height:950px; display: none; background:url(img/sub/story_book/back_img.jpg); background-size:100% 100%; background-repeat:no-repeat; opacity: 0;}
     .main_book{width: 800px; height: 600px; opacity:0; margin:0 auto; background:url(img/sub/story_book/book_img.jpg); background-size: 100% 100%; background-repeat: no-repeat; display:flex; justify-content:center; align-items:center;}
     .main_text{width:50%; height:100%;opacity:0;  margin:0 auto; font-size: 22px;  font-family: "Haan Cooljazz M"; color: #000; float:left; display:flex; justify-content:center; align-items:center; text-align: center;}
+    .main_text2, .main_text3, .main_text_end{width: 50%; height: 100%; margin: 0 auto; opacity: 0; display: none; font-size: 22px; font-family: "Haan Cooljazz M"; float: left;  }
     .blank{width: 50%; height: 100%; opacity: 0; display:flex; justify-content:center; align-items:center;}
     .arrow{width: 0; height: 0; border-top: 20px solid transparent; border-bottom: 20px solid transparent; border-left: 20px solid black; cursor: pointer;}
 
+
+    @keyframes ta1 {
+      0%{opacity: 0;}
+      50%{opacity: 1; transition: 3s;}
+      100%{opacity: 0; transition: 3s; display:none;}
+    }
+
+    @keyframes ta2 {
+      0%{opacity: 0;}
+      65%{display:flex; justify-content:center; align-items:center; text-align: center;}
+      67%{opacity: 1; transition: 3s; }
+      100%{opacity: 0; transition: 3s; display: none;}
+    }
+
+    @keyframes ta3 {
+      0%{opacity: 0;}
+      73%{transition: 3s;  display:flex; justify-content:center; align-items:center; text-align: center;}
+      75%{opacity: 1; transition: 3s;}
+      100%{opacity: 0; transition: 3; display: none;}
+    }
+
+    @keyframes ta_end {
+      0%{opacity: 0;}
+      100%{opacity: 1; transition: 3s; display:flex; justify-content:center; align-items:center; text-align: center;}
+    }
   </style>
 
 <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.js"></script>
@@ -46,14 +72,13 @@ $(function(){
     function(){
       $(".main_book").animate({"opacity":"1","transition":"5s"},
       function(){
-        $(".main_text").animate({"opacity":"1","trasition":"5s"},
-        function(){
-          $(".blank").animate({"opacity":"1"});
+        $(".main_text").css({"animation":"ta1 10s ", "animation-iteration-count":"1"});
         });
       });
     }); 
   });
-});
+
+
 
 
 
@@ -105,17 +130,23 @@ $(function(){
   <div class = "main_book">
 
     <div class = "main_text">
-      “결함 있는 기계는<br><br>
-      아무리 수리해도 또 고장이 난다. <br><br>
-      그 녀석도 마찬가지로 결함품이다… <br><br>
-      앞으로 살아가면서<br><br>
-      그 말이 잘못되었다는 것을 증명하도록 해.“
+      The Text of First.
     </div>
 
-    <div class="blank">
-      <div class="arrow"></div>
-      <div class="arrow"></div>
-    </div> 
+    <div class="main_text2">
+      This is the second text.
+    </div>
+
+    <div class="main_text3">
+      This is the third text.
+    </div>
+
+    <div class="main_text_end">
+      Text End
+    </div>
+
+    <div class="blank"></div> 
+
   </div>
   
 </div>
