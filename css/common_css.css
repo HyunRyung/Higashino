@@ -1,4 +1,5 @@
 a:link,a:active,a:visited{color:#fff;}
+a:hover{transform: scale(1.5); transition: 1s;}
 
 @media (max-width:599px){
   /* header start */
