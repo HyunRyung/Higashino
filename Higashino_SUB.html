@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,152 +9,290 @@
   <link rel="stylesheet" href="css/reset_css.css" type="text/css">
   <link rel="stylesheet" href="css/common_css.css" type="text/css">
   <style>
-    body{background-color: #212121;}
+    body {
+      background-color: #212121;
+    }
 
     /* intro */
-    .intro{width: 100%; height: 850px;}
-    .intro img{width: 100%; height: 100%;}
-    .text_zone{width: 100%; height: 200px; margin: 0 auto; font-family: "Haan Cooljazz M"; text-align: center; margin-bottom: 100px;}
-    .text_box{width: 500px; height: 100%; margin: 0 auto; color: #fff; font-size: 24px; } 
-    .text_box span{font-weight: bold; color:#fff; font-size: 28px;}
-    .text_box p{font-weight: bold; color:#fff;}
+    .intro {
+      width: 100%;
+      height: 850px;
+    }
+
+    .intro img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .text_zone {
+      width: 100%;
+      height: 200px;
+      margin: 0 auto;
+      font-family: "Haan Cooljazz M";
+      text-align: center;
+      margin-bottom: 100px;
+    }
+
+    .text_box {
+      width: 500px;
+      height: 100%;
+      margin: 0 auto;
+      color: #fff;
+      font-size: 24px;
+    }
+
+    .text_box span {
+      font-weight: bold;
+      color: #fff;
+      font-size: 28px;
+    }
+
+    .text_box p {
+      font-weight: bold;
+      color: #fff;
+    }
+
+    /* story */
+    .story {
+      width: 1000px;
+      height: 500px;
+      margin: 200px auto;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .story_slide {
+      width: 14000px;
+      position: relative;
+    }
+
+    .story_slide li {
+      width: 1000px;
+      height: 500px;
+      float: left;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .story_slide li img {
+      width: 50%;
+      height: 100%;
+    }
+
+    .story span {
+      position: absolute;
+      top: 50%;
+      display: block;
+      font-size: 38px;
+      color: #000;
+      line-height: 50px;
+      background: #aaa;
+      cursor: pointer;
+      height: 50px;
+      transform: translateY(-50%);
+      font-family: "나눔스퀘어";
+      font-weight: bold;
+    }
+
+    .story span:hover {
+      background: #fff;
+      color: #000;
+      transition: 1s;
+    }
+
+    .prev {
+      left: 0;
+      border-radius: 10px 0px 0px 10px;
+      padding: 0 8px 0 2px;
+    }
+
+    .next {
+      right: 0;
+      border-radius: 0px 10px 10px 0px;
+      padding: 0 2px 0 8px;
+    }
+
     /* main */
-    .main_prv{width:100%; height: 950px; margin: 0 auto; text-align: center; cursor: pointer; background:#000;}
-    .main_prv_text{width:100%; height:100%; display:flex; justify-content: center; align-items:center; font-size: 50px; color:#fff; opacity: 0; }
-    .main{width:100%; height:950px; display: none; background:url(img/sub/story_book/back_img.jpg); background-size:100% 100%; background-repeat:no-repeat; opacity: 0;}
-    .main_book{width: 800px; height: 600px; opacity:0; margin:0 auto; background:url(img/sub/story_book/book_img.jpg); background-size: 100% 100%; background-repeat: no-repeat; display:flex; justify-content:center; align-items:center;}
-    .main_text{width:50%; height:100%;opacity:0;  margin:0 auto; font-size: 22px;  font-family: "Haan Cooljazz M"; color: #000; float:left; display:flex; justify-content:center; align-items:center; text-align: center;}
-    .main_text2, .main_text3, .main_text_end{width: 50%; height: 100%; margin: 0 auto; opacity: 0; display: none; font-size: 22px; font-family: "Haan Cooljazz M"; float: left;  }
-    .blank{width: 50%; height: 100%; opacity: 0; display:flex; justify-content:center; align-items:center;}
-    .arrow{width: 0; height: 0; border-top: 20px solid transparent; border-bottom: 20px solid transparent; border-left: 20px solid black; cursor: pointer;}
-
-
-    @keyframes ta1 {
-      0%{opacity: 0;}
-      50%{opacity: 1; transition: 3s;}
-      100%{opacity: 0; transition: 3s; display:none;}
+    .main_prv {
+      width: 100%;
+      height: 950px;
+      margin: 0 auto;
+      text-align: center;
+      cursor: pointer;
+      background: #000;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-content: center;
     }
 
-    @keyframes ta2 {
-      0%{opacity: 0;}
-      65%{display:flex; justify-content:center; align-items:center; text-align: center;}
-      67%{opacity: 1; transition: 3s; }
-      100%{opacity: 0; transition: 3s; display: none;}
+    .main_prv_text {
+      width: 100%;
+      height: 100px;
+      font-size: 50px;
+      color: #fff;
+      opacity: 0;
+      font-weight: bold;
     }
 
-    @keyframes ta3 {
-      0%{opacity: 0;}
-      73%{transition: 3s;  display:flex; justify-content:center; align-items:center; text-align: center;}
-      75%{opacity: 1; transition: 3s;}
-      100%{opacity: 0; transition: 3; display: none;}
+    .arrow {
+      width: 0;
+      height: 0;
+      border-top: 20px solid #fff;
+      border-left: 20px solid transparent;
+      border-right: 20px solid transparent;
+      opacity: 0;
     }
 
-    @keyframes ta_end {
-      0%{opacity: 0;}
-      100%{opacity: 1; transition: 3s; display:flex; justify-content:center; align-items:center; text-align: center;}
+    @keyframes blink{
+      0% {opacity: 0; transition: 1s;}
+      25% {opacity: 1; transition: 1s;}
+      50% {opacity: 0; transition: 1s;}
+      75% {opacity: 1; transition: 1s;}
+      100% {opacity: 0; transition: 1s;}
+      
+    }
+
+    .main {
+      width: 100%;
+      height: 950px;
+      display: none;
+      opacity: 0;
+      margin: 0 auto;
+      text-align: center;
     }
   </style>
 
-<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.js"></script>
-<script>
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.js"></script>
+  <script>
 
-$(window).scroll(function(){
- $(".main_prv").mouseenter(function(){
-      $(".main_prv_text").animate({"opacity":"1","transition":"2s"});
+    $(window).scroll(function () {
+      $(".main_prv").mouseenter(function () {
+        $(".main_prv_text").animate({ "opacity": "1", "transition": "2s" });
+        $(".arrow").animate({ "opacity": "1"}).css({"animation":"blink 2.5s infinite"});
       });
     });
 
-    
 
-$(function(){
-  $(".main_prv").click(function(){
-    $(".main_prv").css("display","none");
-    $(".main").css({"display":"flex","justify-content":"center","align-items":"center"}).animate({"opacity":"1","transition":"3s"},
-    function(){
-      $(".main_book").animate({"opacity":"1","transition":"5s"},
-      function(){
-        $(".main_text").css({"animation":"ta1 10s ", "animation-iteration-count":"1"});
-        });
+
+    $(function () {
+      $(".main_prv").click(function () {
+        $(".main_prv").fadeOut(1500);
+        $(".main").css({ "display": "flex", "justify-content": "center", "align-items": "center" }).animate({ "opacity": "1", "transition": "7s" });
       });
-    }); 
-  });
+    });
 
 
 
+    $(function () {
+
+      $('.prev').click(function () {
+
+        $('.story_slide li:last').prependTo('.story_slide');
+
+        $('.story_slide').css('margin-left', -1000);
+
+        $('.story_slide').stop().animate({ marginLeft: 0 }, 1000)
+
+      });
 
 
-</script>
+      $('.next').click(function () {
+
+        $('.story_slide').stop().animate({ marginLeft: -1000 }, 1000, function () {
+
+          $('.story_slide li:first').appendTo('.story_slide');
+
+          $('.story_slide').css({ marginLeft: 0 });
+
+        });
+
+      });
+
+    });
+  </script>
 </head>
+
 <body>
 
- 
-<header>
-  <nav>
-    <ul>
-      <li><a href="index.html">MAIN</a></li>
-      <li><a href="Higashino_SUB.html">DESCRIPTION</a></li>
-      <li><a href="#">DETAIL</a></li>
+
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">MAIN</a></li>
+        <li><a href="Higashino_SUB.html">DESCRIPTION</a></li>
+        <li><a href="#">DETAIL</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <div class="intro">
+    <img src="img/sub/intro/tree.jpg" alt="intro_img">
+  </div>
+
+
+  <div class="text_zone">
+
+    <div class="text_box">
+      <span>"</span>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;
+      <span>"</span> <br>
+      소원을 100% 들어주는<br>
+      신비한 나무의 이야기입니다. <br>
+      옆 사람과 서로 마음을 열고 만나기를 <br>
+      빌어보는 것도 가능합니다. <br>
+      &nbsp;&nbsp; <p> - 작가 히가시노 게이고 </p>
+    </div>
+  </div>
+
+  <div class="story">
+
+    <ul class="story_slide">
+
+
+      <li><img src="img/sub/story/story1.jpg" alt="story_slide1"></li>
+      <li><img src="img/sub/story/story2.jpg" alt="story_slide2"></li>
+      <li><img src="img/sub/story/story3.jpg" alt="story_slide3"></li>
+      <li><img src="img/sub/story/story4.jpg" alt="story_slide4"></li>
+      <li><img src="img/sub/story/story5.jpg" alt="story_slide5"></li>
+      <li><img src="img/sub/story/story6.jpg" alt="story_slide6"></li>
+      <li><img src="img/sub/story/story7.jpg" alt="story_slide7"></li>
+      <li><img src="img/sub/story/story8.jpg" alt="story_slide8"></li>
+      <li><img src="img/sub/story/story9.jpg" alt="story_slide9"></li>
+      <li><img src="img/sub/story/story10.jpg" alt="story_slide10"></li>
+      <li><img src="img/sub/story/story11.jpg" alt="story_slide11"></li>
+      <li><img src="img/sub/story/story12.jpg" alt="story_slide12"></li>
+      <li><img src="img/sub/story/story13.jpg" alt="story_slide13"></li>
+      <li><img src="img/sub/story/story14.jpg" alt="story_slide14"></li>
+
+
     </ul>
-  </nav>
-</header> 
 
-  
-<div class="intro">
-  <img src="img/sub/intro/tree.jpg" alt="intro_img">
-</div>
+    <span class="prev">&lt;</span>
 
-
-<div class="text_zone">
-
-  <div class="text_box">
-    <span>"</span>  
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;   
-    <span>"</span>  <br>
-    소원을 100% 들어주는<br>
-    신비한 나무의 이야기입니다. <br>
-    옆 사람과 서로 마음을 열고 만나기를 <br>
-    빌어보는 것도 가능합니다. <br>
-    &nbsp;&nbsp; <p> - 작가 히가시노 게이고 </p>
-  </div>
-
-</div>
-
-<div class="main_prv">
-
-  <div class="main_prv_text">
-    text
-  </div>
-</div>
-
-<div class="main">
-
-  <div class = "main_book">
-
-    <div class = "main_text">
-      The Text of First.
-    </div>
-
-    <div class="main_text2">
-      This is the second text.
-    </div>
-
-    <div class="main_text3">
-      This is the third text.
-    </div>
-
-    <div class="main_text_end">
-      Text End
-    </div>
-
-    <div class="blank"></div> 
+    <span class="next">&gt;</span>
 
   </div>
-  
-</div>
+
+  <div class="main_prv">
+    <div class="main_prv_text">
+      당신은 기적을 믿으시나요 ?
+    </div>
+    <div class="arrow"></div>
+  </div>
+
+  <div class="main">
+    <video class="trailer" width="1000" height="700" src="video/sub/trailer.webm" autoplay muted>
+    </video>
+  </div>
 
 
 
-  
+
 </body>
 
 </html>
