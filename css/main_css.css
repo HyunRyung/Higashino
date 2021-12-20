@@ -208,7 +208,7 @@ footer p{font-size: 28px; font-weight: bold;}
 .master img{width: 100%; height: 100%; }
 .master img:hover{transform: scale(1.2); transition:1s;}
 .master_1, .master_2, .master_3{width: 33%; height: 80%; float: left; margin-top: 50px;}
-.master_img1, .master_img2, .master_img3{width: 80%px; height: 80%; margin: 40px 50px;}
+.master_img1, .master_img2, .master_img3{width: 80%; height: 80%; margin: 40px 50px;}
 .master_img2{border: 1px solid #eee;}
 /* master end */
 
