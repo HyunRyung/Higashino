@@ -16,6 +16,7 @@
   <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.js"></script>
   <script>
 
+
     $(window).scroll(function () {
       $(".main_prv").mouseenter(function () {
         $(".main_prv_text").animate({ "opacity": "1", "transition": "2s" });
@@ -32,34 +33,86 @@
       });
     });
 
-
-
-    $(function () {
-
-      $('.prev').click(function () {
-
-        $('.story_slide li:last').prependTo('.story_slide');
-
-        $('.story_slide').css('margin-left', -1000);
-
-        $('.story_slide').stop().animate({ marginLeft: 0 }, 1000)
-
-      });
-
-
-      $('.next').click(function () {
-
-        $('.story_slide').stop().animate({ marginLeft: -1000 }, 1000, function () {
-
-          $('.story_slide li:first').appendTo('.story_slide');
-
-          $('.story_slide').css({ marginLeft: 0 });
-
+    if (window.matchMedia("(max-width:599px)").matches){
+      $(function(){
+      $(window).scroll( function(){
+        $(".main_prv").each( function(i){
+          let boe=$(this).offset().top+$(this).outerHeight();
+          let bow=$(window).scrollTop()+$(window).height();
+          if( bow > boe/0.95){
+            $(".main_prv_text").animate({ "opacity": "1", "transition": "2s" });
+            $(".arrow").animate({ "opacity": "1"}).css({"animation":"blink 2.5s infinite"});
+          }
         });
-
       });
-
     });
+    };
+
+    
+
+      if (window.matchMedia("(min-width: 1200px)").matches) { 
+
+/* 뷰포트 너비가 1200 픽셀 이상 */ 
+$(function () {
+
+$('.prev').click(function () {
+
+  $('.story_slide li:last').prependTo('.story_slide');
+
+  $('.story_slide').css('margin-left', -1000);
+
+  $('.story_slide').stop().animate({ marginLeft: 0 }, 1000)
+
+});
+
+
+$('.next').click(function () {
+
+  $('.story_slide').stop().animate({ marginLeft: -1000 }, 1000, function () {
+
+    $('.story_slide li:first').appendTo('.story_slide');
+
+    $('.story_slide').css({ marginLeft: 0 });
+
+  });
+
+});
+
+});
+} else { 
+
+/* 뷰포트 너비가 1200 픽셀 미만 */
+$(function () {
+
+  let w = window.innerWidth;
+
+$('.prev').click(function () {
+
+  $('.story_slide li:last').prependTo('.story_slide');
+
+  $('.story_slide').css('margin-left', -w);
+
+  $('.story_slide').stop().animate({ marginLeft: 0 }, 1000)
+
+});
+
+
+$('.next').click(function () {
+
+  $('.story_slide').stop().animate({ marginLeft: -w }, 1000, function () {
+
+    $('.story_slide li:first').appendTo('.story_slide');
+
+    $('.story_slide').css({ marginLeft: 0 });
+
+  });
+
+});
+
+});
+};
+
+
   </script>
 </head>
 
@@ -140,8 +193,45 @@
     </video>
   </div>
 
-  <div class="text_slide">
-    <img src="img/sub/text_slide/text_slide.jpg" alt="text_img1">
+  <div class="text_place">
+
+    <div class="text1">
+      <p>
+        이 세상에 태어나지 말았어야 <br>
+        하는 인간이라는 것은 없습니다. <br>
+        어디에도 없어요. <br>
+        어떤 사람이든 이 세상에 <br>
+        태어난 이유가 있습니다. <br>
+        그것만은 똑똑히 기억해두도록 하세요. <br><br>
+
+        -녹나무의 파수꾼 476p
+      </p>
+    </div>
+
+    <div class="text2">
+      <p>
+        가족애라는 것에 대해서 <br>
+        다시금 한번 돌아보게 된 계기가 된 책 <br>
+        녹나무라는 매개체를 통하여 <br>
+        히가시노 게이고라는 작가가 <br>
+        사람 대 사람으로써 전하고자 하는 것을 <br>
+        제대로 들어볼 수 있었던<br> 
+        책이었던 것 같아 인상이 깊었던 책.
+      </p>
+    </div>
+
+    <div class="text3">
+      <P>
+        기념이라는 특이한 방식으로 <br>
+        소원을 비는 나무에 <br>
+        다른 사람의 기억과 감정을 <br>
+        공유할 수 있다는 어떻게 보면  <br>
+        비현실적이고 미신같은 일들을 <br>
+        책으로 표현함으로써 지금 우리들이 <br>
+        메말라 있다는 것을 말하고 싶은 것이 아닐까. 
+      </P>
+    </div>
+
   </div>
 
   <div class="another_piece">
