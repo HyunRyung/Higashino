@@ -219,7 +219,7 @@
     transition: 1.5s;
   }
 
-  .another_piece a:hover {
+  .another_piece:hover .another_piece a{
     color: #212121;
     transition: 1.5s;
   }
@@ -665,8 +665,9 @@ body {
     transition: 1.5s;
   }
 
-  .another_piece a:hover {
+  .another_piece:hover a{
     color: #212121;
     transition: 1.5s;
   }
+
 }
